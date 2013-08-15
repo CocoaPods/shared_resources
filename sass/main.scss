@@ -10,16 +10,28 @@
 }
 
 .navbar-nav {
-  li a {
+  > li > a {
     font-family: 'Georgia';
     font-size: 16px;
     font-weight: bold;
     color: $background-color;
+
+    &:hover,
+    &:focus {
+      color: $nav-hover-color;
+      background-color: $nav-background-hover-color;
+    }
   }
 
   > .active > a {
     color: $base-color;
     background-color: $background-color;
+
+    &:hover,
+    &:focus {
+      color: $nav-hover-color;
+      background-color: $nav-background-hover-color;
+    }
   }
 }
 
