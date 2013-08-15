@@ -9,16 +9,18 @@
   color: red;
 }
 
-.navbar-nav li a {
-  font-family: 'Georgia';
-  font-size: 16px;
-  font-weight: bold;
-  color: $background-color;
-}
+.navbar-nav {
+  li a {
+    font-family: 'Georgia';
+    font-size: 16px;
+    font-weight: bold;
+    color: $background-color;
+  }
 
-.navbar-nav > .active > a {
-  color: $base-color;
-  background-color: $background-color;
+  > .active > a {
+    color: $base-color;
+    background-color: $background-color;
+  }
 }
 
 .navbar-brand {
