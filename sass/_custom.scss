@@ -1,0 +1,130 @@
+$cocoapods-base-colour: #4a0600;
+$cocoapods-highlight-colour: red;
+
+$pods-font: "GT Walsheim Trial";
+$pods-strong-font: "GT Walsheim Trial Bold";
+
+$pods-dark-grey: #c1c1c1;
+$pods-light-grey: whitesmoke;
+
+pre {
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-left: 2px solid $cocoapods-highlight-colour;
+  border-radius: 0;
+  padding-left: 20px;
+}
+
+.navbar {
+  height: 56px;
+  .navbar-brand {
+    padding: 0;
+  }
+}
+
+.navbar-inverse {
+  background-color: $cocoapods-base-colour;
+  .navbar-nav {
+    font-family: $pods-font;
+    text-transform: uppercase;
+    li a {
+      font-size: 18px;
+      padding-top: 26px;
+      padding-bottom: 8px;
+      height: 56px;
+      font-weight: 500;
+      color: white;
+      &:hover, &:focus {
+        font-weight: 1000;
+      }
+    }
+  }
+  .navbar-toggle {
+    border-color: white;
+    &:hover, &:focus {
+      background-color: $cocoapods-highlight-colour;
+    }
+  }
+}
+
+.blank_headline {
+  height: 260px;
+}
+
+#search {
+  #cocoapods_search {
+    font-family: $pods-font;
+    color: $cocoapods-highlight-colour;
+    font-size: 48px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid $pods-dark-grey;
+    text-transform: uppercase;
+    &:focus {
+      outline: none;
+    }
+    &.full_screen {
+      background-color: black;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1031;
+    }
+  }
+}
+
+#content {
+  background-color: $pods-light-grey;
+  width: 100%;
+  font-family: $pods-font;
+  font-size: 18px;
+  .nav-tabs.cocoapods_three_step {
+    margin-top: 92px;
+    margin-bottom: 68px;
+    font-size: 24px;
+    text-transform: uppercase;
+    .active {
+      a {
+        color: $cocoapods-base-colour;
+      }
+    }
+    a {
+      border-left: none;
+      border-top: none;
+      border-right: none;
+      border-bottom: 2px solid $pods-dark-grey;
+      background: none;
+      border-radius: 0;
+      color: $pods-dark-grey;
+      &:hover, &:focus {
+        border:none {}
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+  .section-title h4 {
+    margin-top: 92px;
+    margin-bottom: 68px;
+    font-size: 24px;
+    text-transform: uppercase;
+    border-bottom: 2px solid $pods-dark-grey;
+    text-align: center;
+    padding-bottom: 16px;
+    font-weight: 400;
+    color: $cocoapods-base-colour;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .visible-lg-inline {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .visible-lg-inline {
+    display: inline;
+  }
+}
