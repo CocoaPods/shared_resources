@@ -1,3 +1,12 @@
 @import "bootstrap"; // Bootstrap includes normalize.css
-@import "custom";
+// @import "custom";
+
+.navbar-brand {
+  background: url("/img/CP_logo_rough.png") no-repeat left center;
+  // display: block;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  width: 201px;
+}
 
