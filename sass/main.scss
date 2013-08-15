@@ -1,5 +1,24 @@
 @import "bootstrap"; // Bootstrap includes normalize.css
+@import "vars";
 // @import "custom";
+
+.navbar {
+  background-color: $base-color;
+  border: none;
+  color: red;
+}
+
+.navbar-nav li a {
+  font-family: 'Georgia';
+  font-size: 16px;
+  font-weight: bold;
+  color: $background-color;
+}
+
+.navbar-nav > .active > a {
+  color: $base-color;
+  background-color: $background-color;
+}
 
 .navbar-brand {
   background: url("/img/CP_logo_rough.png") no-repeat left center;
@@ -8,5 +27,11 @@
   padding: 0;
   height: 50px;
   width: 201px;
+}
+
+#blog-header {
+  color: $base-color;
+  font-family: $strong-fonts;
+  font-weight: bold;
 }
 
