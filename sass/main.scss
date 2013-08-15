@@ -2,6 +2,7 @@
 @import "vars";
 // @import "custom";
 
+// Overriding navbar for custom colors
 .navbar {
   background-color: $base-color;
   border: none;
@@ -22,11 +23,23 @@
 
 .navbar-brand {
   background: url("/img/CP_logo_rough.png") no-repeat left center;
-  // display: block;
-  margin: 0;
-  padding: 0;
   height: 50px;
   width: 201px;
+}
+
+.navbar-toggle {
+  border-color: $background-color;
+  &:hover,
+  &:focus {
+    background-color: $background-color;
+
+    .icon-bar {
+      background-color: $base-color;
+    }
+  }
+  .icon-bar {
+    background-color: $background-color;
+  }
 }
 
 #blog-header {
