@@ -17,15 +17,16 @@
     font-size: 16px;
     color: $background-color;
     text-transform: uppercase;
-    padding-top: 18px;
+    padding-top: 24px;
     padding-bottom:6px;
-
+    height: 50px;
+    
     &:hover,
     &:focus {
       color: $nav-color;      
       background-color: $base-color;
-      padding-bottom: 12px;
-      border-bottom: 3px $blog-highlight-color solid;
+      padding-bottom: 5px;
+      border-bottom: 4px $blog-highlight-color solid;
     }
     
     &:active {
@@ -34,8 +35,8 @@
   }
 
   > .active > a {
-    border-bottom: 3px $blog-highlight-color solid;
-    padding-bottom: 12px;
+    border-bottom: 4px $blog-highlight-color solid;
+    padding-bottom: 5px;
     background-color: $base-color;
     color: $nav-color;      
     
