@@ -1,9 +1,26 @@
-@import "bootstrap"; // Bootstrap includes normalize.css
+// Bootstrap includes normalize.css
+@import "bootstrap"; 
 @import "vars";
 @import "syntax";
-// @import "custom";
 
-// Overriding navbar for custom colors
+
+///  Baseline colours & fonts
+
+body {
+  font-family: $fonts;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.2em;
+}
+
+a {
+  color: $blog-highlight-color;
+}
+
+///// Navigation
+
 .navbar {
   background-color: $base-color;
   border: none;
@@ -69,10 +86,11 @@
   }
 }
 
+/// Headline
+
 .headline {
   color: $blog-highlight-color;
   display: block;
-  font-family: $fonts;
   font-size: 40px;
   height: 340px;
 }
@@ -87,9 +105,8 @@
   }
 }
 
-
-
 $divider-color: #bbb;
+
 .horizontal-divider {
   background-color: $divider-color;
   box-shadow: 1px 1px 1px #ddd;
@@ -130,7 +147,6 @@ $divider-color: #bbb;
 }
 
 .gravatar {
-  margin-right: 10px;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
