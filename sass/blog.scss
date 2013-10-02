@@ -1,0 +1,25 @@
+header.blog-post {
+  h1 {
+    position: absolute;
+    bottom: 18px;
+    left: 15px;
+    
+    font-weight:normal;
+    font-size:48px;
+    width:75%;
+  }
+}
+
+article.author.metadata header {
+  text-align:center;
+  margin-top:-36px;
+  
+  img {
+    margin-bottom:20px;
+  }
+  
+  p {
+    margin-bottom:4px;
+    margin-top:0px;
+  }
+}
