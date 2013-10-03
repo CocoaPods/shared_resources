@@ -1,5 +1,7 @@
 // Bootstrap includes normalize.css
+
 @import "bootstrap"; 
+@import "fonts";
 @import "vars";
 @import "syntax";
 
@@ -38,7 +40,7 @@ a {
 
 .navbar-nav {
   > li > a {
-    font-family: "GT Walsheim Trial";
+    font-family: "GT Walsheim";
     font-size: 16px;
     color: $background-color;
     text-transform: uppercase;
@@ -75,7 +77,7 @@ a {
 }
 
 .navbar-brand {
-  background: url("/img/CP_logo_rough.png") no-repeat left center;
+  background: url("/img/cocoapods_logo.png") no-repeat left center;
   height: 50px;
   width: 201px;
 }
@@ -109,21 +111,13 @@ a {
   
   h1 {
     font-size: 72px;
-    padding-top:90px;
-    padding-bottom:18px;
+    padding-top: 110px;
+    padding-bottom: 18px;
   }
 }
 
 $divider-color: #bbb;
 
-.horizontal-divider {
-  background-color: $divider-color;
-  box-shadow: 1px 1px 1px #ddd;
-  display: block;
-  height: 1px;
-  margin: 0 auto;
-  width: 50%;
-}
 
 @mixin arrow-down($size, $color) {
 	border-left: $size solid transparent;
@@ -133,6 +127,20 @@ $divider-color: #bbb;
   height: 0;
   margin: 0 auto;
   width: 0;
+}
+
+
+.horizontal-divider {
+  background-color: $divider-color;
+  box-shadow: 1px 1px 1px #ddd;
+  display: block;
+  height: 1px;
+  margin: 0 auto;
+  width: 50%;
+}
+.sidebar .enclosed-arrow-down {
+  @include arrow-down(13px, $content-background-color);
+  margin-top:-15px;
 }
 
 .enclosed-arrow-down {
@@ -147,6 +155,10 @@ $divider-color: #bbb;
   background-color: $content-background-color;
   margin: 0;
   padding: 0;
+}
+
+.row {
+  padding:20px 0;
 }
 
 .gravatar {
