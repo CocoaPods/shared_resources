@@ -15,6 +15,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $fonts;
 }
 
+
+/// TODO: On small screens code should either wrap of be scrollable
+code {
+
+}
+
 p {
   font-size: 18px;
   line-height: 1.4em;
@@ -116,6 +122,12 @@ a {
   }
 }
 
+@media (max-width:768px) {
+  .headline.index h1 {
+    font-size:48px;
+  }
+}
+
 $divider-color: #bbb;
 
 
@@ -168,8 +180,8 @@ $divider-color: #bbb;
 }
 
 footer.page-footer {
-  background-color: $footer-background-color;
   padding:50px 0;
+  background-color: $footer-background-color;
   color:white;
   
   p {
