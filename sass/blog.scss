@@ -26,11 +26,17 @@ article.author.metadata header {
   }
 }
 
+@media (max-width: 1024px) {
+  article.author.metadata header {
+    margin-top:32px;
+  }
+}
+
 .sidebar {
-  text-align:center;
-  
+  text-align:center;  
+
   ol {
-    
+    padding-top:20px;
     li {
       text-align:left;
     }
