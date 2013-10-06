@@ -117,22 +117,6 @@ a {
   height: 340px;
 }
 
-.headline.index {
-  text-align: center;
-  
-  h1 {
-    font-size: 72px;
-    padding-top: 110px;
-    padding-bottom: 18px;
-  }
-}
-
-@media (max-width:768px) {
-  .headline.index h1 {
-    font-size:48px;
-  }
-}
-
 $divider-color: #bbb;
 
 
@@ -201,5 +185,17 @@ footer.page-footer {
   
   a:hover, a:focus {
     color: $footer-link-hover-color;
+  }
+}
+
+@media (min-width: 1200px) {
+  .visible-lg-span {
+    display:inline;
+  }
+}
+
+@media (max-width: 1200px) {
+  .visible-lg-span {
+    display:none;
   }
 }
