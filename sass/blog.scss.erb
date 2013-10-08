@@ -15,7 +15,16 @@
     user-select: none;
     
     cursor: default;
-    word-wrap:break-word;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .headline {
+    height:180px;
+
+    &.blog-post h1 {
+      font-size:32px;
+    }
   }
 }
 
@@ -34,6 +43,8 @@ header.blog-post {
     font-weight:normal;
     font-size:48px;
     width:75%;
+    word-wrap:break-word;
+    
   }
 }
 
