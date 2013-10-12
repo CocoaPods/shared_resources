@@ -18,6 +18,20 @@
   }
 }
 
+@media screen and (max-width: 400px){
+  .headline {
+    height:180px;
+
+    &.index h1{
+      padding-top: 30px;
+    }
+    
+    &.blog-post h1 {
+      font-size:32px;
+    }
+  }
+}
+
 @media (max-width:768px) {
   .headline.index h1 {
     font-size:48px;
@@ -33,6 +47,8 @@ header.blog-post {
     font-weight:normal;
     font-size:48px;
     width:75%;
+    word-wrap:break-word;
+    
   }
 }
 
