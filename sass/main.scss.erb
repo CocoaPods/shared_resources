@@ -1,8 +1,6 @@
 //= require fonts.css
 
-@import "bootstrap"; 
 @import "vars";
-@import "syntax";
 
 ///  Baseline colours & fonts
 
@@ -86,9 +84,10 @@ a {
 }
 
 .navbar-brand {
-  background: url(<%= asset_path "cocoapods_logo.png" %>) no-repeat left center;
+  background: url(<%= asset_data_uri "cocoapods_logo.png" %>) no-repeat left center;
   height: 50px;
   width: 201px;
+  background-size: 201px 50px;
 }
 
 .navbar-toggle {
