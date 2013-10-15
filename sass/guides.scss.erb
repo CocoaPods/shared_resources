@@ -1,17 +1,52 @@
-#footer ul {
-  list-style: none;
-  padding-left:0;
+@import "vars";
+
+
+.header {
+  h1 {
+    color:$blog-highlight-color;
+  }
 }
 
-.half {
-  width: 50%;
-  float:left;;
-}
+#content-wrapper {
 
-li {
-  font-size: 18px;
-  line-height: 1.4em;
-  margin: 8px 0 8px;
+  blockquote {
+    padding: 0px 20px;
+    margin: 0;
+    border-left: 2px solid $blog-highlight-color;
+    p {
+      font-size: 20px;
+    }
+  }
+
+  #footer ul {
+    list-style: none;
+    padding-left:0;
+  }
+
+  .half {
+    width: 50%;
+    float:left;
+    h3 {
+      margin: 22px 0;
+    }
+    p {
+      margin:12px;
+    }
+  }
+
+  h3 {
+    margin: 44px 0 16px;
+  }
+
+  ul {
+    margin: 12px 0 24px;    
+  }
+  
+  li {
+    font-size: 18px;
+    line-height: 1.4em;
+    margin: 8px 0 8px;
+  }
 }
 
 .footer-index {
