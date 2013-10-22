@@ -63,8 +63,10 @@ a {
     font-size: 16px;
     color: $background-color;
     text-transform: uppercase;
-    padding-top: 24px;
+    padding-top: 14px;
     padding-bottom:6px;
+    padding-left:8px;
+    padding-right:8px;
     height: 50px;
     letter-spacing: 1.2pt;
     
@@ -82,15 +84,18 @@ a {
   }
 
   > .active > a {
-    border-bottom: 4px $blog-highlight-color solid;
-    padding-bottom: 5px;
-    background-color: $base-color;
+    border-top: 6px $base-color solid;
+    padding-top: 8px;
+    background-color: $blog-highlight-color;
     color: $nav-color;      
+    font-weight: bold;
+    cursor:default;
     
     &:hover,
     &:focus {
-      color: $nav-color;
-      background-color: $base-color;
+      background-color: $blog-highlight-color;
+      color: $nav-color;      
+      
     }
   }
 }
