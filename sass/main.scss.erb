@@ -23,6 +23,8 @@ aside {
 /// TODO: On small screens code should either wrap of be scrollable
 .code-break {
   background-color:white;
+  margin-left:20px;
+  margin-right:20px;
 }
 
 pre.highlight {
@@ -101,10 +103,10 @@ a {
 }
 
 .navbar-brand {
-  background: url(<%= asset_data_uri "cocoapods_logo.png" %>) no-repeat left center;
-  height: 50px;
-  width: 201px;
-  background-size: 201px 50px;
+  background: url(<%= asset_data_uri "CocoaPods-Logo.png" %>) no-repeat left center;
+  height: 48px;
+  width: 150px;
+  background-size: 150px 48px;
 }
 
 .navbar-toggle {
@@ -143,7 +145,6 @@ $divider-color: #bbb;
   margin: 0 auto;
   width: 0;
 }
-
 
 .horizontal-divider {
   background-color: $divider-color;
@@ -190,6 +191,13 @@ footer.page-footer {
   padding:50px 0;
   background-color: $footer-background-color;
   color:white;
+  
+  h4 {
+    text-transform:uppercase;
+    color:$highlight-on-dark-background-color;
+    font-size:14px;
+    margin-bottom: 0px; 
+  }
   
   p {
     margin:0 0 20px;
