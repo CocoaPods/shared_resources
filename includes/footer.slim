@@ -1,16 +1,16 @@
-footer class="page-footer"
-  section class="container row"
-    article class="col-md-8 col-md-offset-2"
+footer.page-footer
+  section.container.row
+    article.col-md-8.col-md-offset-2
 
       h4 CocoaPods is a project from 
-      p 
+      p.contributors
         | <a href="https://twitter.com/alloy">Eloy Durán</a>, 
         | <a href="https://twitter.com/fabiopelosin">Fabio Pelosin</a>, 
         | <a href="https://orta.github.io">Orta Therox</a>,  
         | and The CocoaPods Dev Team with contributions from <a href="https://github.com/CocoaPods/Specs/graphs/contributors">many, many others</a>.
 
       h4 Lovingly sponsored by
-      p 
+      p.sponsors
         | <a href="http://www.fngtps.com">Fingertips</a>, 
         | <a href = "http://www.hipbyte.com">Hipbyte</a>, 
         | <a href="http://artsy.net">Artsy</a> and 
@@ -33,11 +33,17 @@ footer class="page-footer"
         | <a href="http://twitter.com/maxsteenbergen">Max Steenbergen</a>
       
     article class="col-md-8 col-md-offset-2 minor"
-      p 
-        | <a href="http://cocoapods.org/support">Support</a>, 
-        | <a href="https://github.com/CocoaPods/CocoaPods">Github Repo</a>, 
-        | <a href="https://github.com/CocoaPods/Specs">Podspecs Repo</a>, 
-        | <a href="https://guides.cocoapods.org">Podspec Documentation</a>, 
-        | <span class="visible-lg-span"><a href="https://api.cocoapods.org">Developer Reference</a>, </span>
-        | <a href="http://groups.google.com/group/cocoapods">Mailing List</a> &amp; 
-        | <a href="http://twitter.com/CocoaPods">@CocoaPods</a>. 
+
+footer.footer-links
+  section.container.row
+    article.col-md-8.col-md-offset-2
+      a.cocoapods-small-logo href="http://cocoapods.org"
+        
+      ul 
+        li.col-md-3.col-sm-3.col-xs-6 <a href="http://cocoapods.org/support">Support</a>
+        li.col-md-3.col-sm-3.col-xs-6 <a href="https://github.com/CocoaPods/CocoaPods">Github Repo</a>
+        li.col-md-3.col-sm-3.col-xs-6 <a href="https://github.com/CocoaPods/Specs">Podspecs Repo</a>
+        li.col-md-3.col-sm-3.col-xs-6 <a href="http://twitter.com/CocoaPods">@CocoaPods</a>
+        li.col-md-3.col-sm-3.col-xs-6 <a href="http://groups.google.com/group/cocoapods">Mailing List</a>
+        li.col-md-3.col-sm-3.col-xs-6 <a href="https://api.cocoapods.org">Developer Reference</a>
+        li.col-md-3.col-sm-3.col-xs-6 <a href="https://guides.cocoapods.org/syntax/podfile.html">Podfile Doc<span class="hidden-lg-span">s</span><span class="visible-lg-span">umentation</span></a>

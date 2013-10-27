@@ -187,40 +187,105 @@ $divider-color: #bbb;
   -webkit-border-radius: 50%;
 }
 
-footer.page-footer {
-  padding:50px 0;
-  background-color: $footer-background-color;
-  color:white;
+footer {
+  &.page-footer {
+    padding: 30px 0;
+    background-color: $footer-background-color;
+    color:white;
+    
+    .contributors {
+      font-size:24px;
+    }
   
-  h4 {
-    text-transform:uppercase;
-    color:$highlight-on-dark-background-color;
-    font-size:14px;
-    margin-bottom: 0px; 
+    .sponsors {
+      font-size:20px;
+    }
+  
+    h4 {
+      text-transform:uppercase;
+      color:$highlight-on-dark-background-color;
+      font-size:14px;
+      margin-bottom: 0px; 
+    }
+  
+    p {
+      margin:0 0 20px;
+      font-size:18px;
+    }
+  
+    article.minor p {
+      margin:0 0 14px;
+      font-size:14px;    
+    }
+  
+    a:hover, a:focus {
+      color: $footer-link-hover-color;
+    }
   }
   
-  p {
-    margin:0 0 20px;
-    font-size:18px;
+  &.footer-links {
+    background-color:$secondary-red;
+    ul {
+      margin-left:-16px;
+      padding-left:0;
+    }
+    
+    li {
+      border-right: 2px solid rgba($blog-highlight-color, 0.5);
+      list-style-type: none;
+      font-size:12px;
+      padding-bottom: 6px;
+     
+      &:hover {
+        border-right: 2px solid $blog-highlight-color;
+      }
+      
+      a {
+        color: white;
+      }
+    }
+    
+    .cocoapods-small-logo {
+      display:block;
+      position:absolute;
+      top: 2px;
+      left: -70px;
+      margin-bottom: 12px;
+      
+      background: url(<%= asset_data_uri "CocoaPods-Logo-Mini.png" %>) no-repeat left center;
+      height: 36px;
+      width: 36px;
+      background-size: 36px 36px; 
+    }
   }
-  
-  article.minor p {
-    margin:0 0 14px;
-    font-size:14px;    
+}
+
+@media (max-width:800px){
+  footer.footer-links .cocoapods-small-logo {
+    position:static;
   }
-  
-  a:hover, a:focus {
-    color: $footer-link-hover-color;
+}
+
+@media (max-width: 1000px){
+  footer.footer-links .cocoapods-small-logo {
+    left: -40px;
   }
 }
 
 @media (min-width: 1200px) {
+  .hidden-lg-span {
+    display:none;
+  }
+  
   .visible-lg-span {
     display:inline;
   }
 }
 
 @media (max-width: 1200px) {
+  .hidden-lg-span {
+    display:inline;
+  }
   .visible-lg-span {
     display:none;
   }
