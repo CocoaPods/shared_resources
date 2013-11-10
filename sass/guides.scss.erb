@@ -43,6 +43,18 @@
 
 #content-wrapper {
   
+  .header-link {
+    content: "<";
+    color: white;
+    position: absolute;
+    left:-0.3em;
+    
+    &:hover {
+      text-decoration:none;
+      color:$blog-highlight-color;
+    }
+  }
+  
   #tab-content {
     h2 {
       margin-top: 20px;
