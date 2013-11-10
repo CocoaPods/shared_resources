@@ -53,6 +53,15 @@
       background-color:white;
       border:none;
     }
+    
+    blockquote {
+      margin: 6px 0;
+    }
+    
+    hr {
+      border-color:white;
+      border-width:4px;
+    }
   }
 
 
@@ -74,6 +83,7 @@
   .half {
     width: 50%;
     float:left;
+    
     h3 {
       margin: 22px 0;
     }
@@ -115,8 +125,23 @@ table.inherited_options {
   } 
 }
 
-h2.guide-index {
-  min-height:2.5em;
+.homepage-index {
+  li { 
+    padding-left:8px;
+    
+    a p {
+      color:black;
+    }  
+    
+    a:hover p {
+      text-decoration:none !important;
+    }
+    
+  }
+
+  h2.guide-index {
+    min-height:2.5em;
+  }
 }
 
 @media screen and (max-width: 400px){
