@@ -2,7 +2,7 @@ ruby:
   is_guides = defined? guides
   is_api = defined? api
   is_blog = false
-  is_about = false
+  is_home = defined? home
   
   def is_active active
     if active
@@ -27,11 +27,8 @@ nav.navbar.navbar-static-top role="navigation"
     div.collapse.navbar-collapse.navbar-header-collapse
       ul.nav.navbar-nav.navbar-right
 
-        li *is_active(is_about)
+        li *is_active(is_home)
           a href="http://cocoapods.org" == "About"
-        
-        li *is_active(is_api)
-          a href="http://docs.cocoapods.org" == "API Docs"
         
         li *is_active(is_guides)
           a href="http://docs.cocoapods.org/guides/index.html" == "Guides"
