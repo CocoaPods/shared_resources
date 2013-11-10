@@ -1,6 +1,7 @@
 //= require fonts.css
 
 @import "vars";
+@import "syntax";
 
 ///  Baseline colours & fonts
 
@@ -241,16 +242,15 @@ $divider-color: #bbb;
       font-size:14px;
     }
   }
-  
-  a#pull-request {
-    background: url(<%= asset_data_uri "pull-request-image.png" %>) no-repeat left center;
-    height: 50px;
-    width: 50px;
-    background-size: 50px 50px;
-    float:right;
-  }
 }
 
+a#pull-request {
+  background: url(<%= asset_data_uri "pull-request-image.png" %>) no-repeat left center;
+  height: 50px;
+  width: 50px;
+  background-size: 50px 50px;
+  float:right;
+}
 
 .popover {
   border: 1px solid $blog-highlight-color;
@@ -258,6 +258,7 @@ $divider-color: #bbb;
   -webkit-box-shadow: none;
   box-shadow: none; 
 }
+
 .popover.top .arrow {
   border-top-color: $blog-highlight-color;
 }
@@ -293,6 +294,7 @@ footer {
   
     .sponsors {
       font-size:20px;
+      margin-bottom:0px;
     }
   
     h4 {
