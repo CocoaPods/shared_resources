@@ -82,21 +82,18 @@
     margin: 0 auto;
   }
 
-  ol.results 
-  {
+  ol.results, .allocations ol.shown {
     list-style: none;
     padding: 0;
     
-    li.result
-    {
+    li {
       font-size: 90%;
       background-color: white;
       margin: 0;
       padding: 0 10px 10px;
-      border: 2px solid lightgray;
+      border: 1px solid #cccccc;
       
-      .infos
-      {
+      .infos {
         width: 60%;
         
         span.os {
@@ -106,6 +103,23 @@
           background-color: black;
         }
       }
+      
+      .text {
+        width: 90%;
+        float: left;
+      }
+      .count {
+        text-align: right;
+      }
+    }
+  }
+  
+  .allocations ol.shown li {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    
+    .text em {
+      color: red;
     }
   }
   
@@ -121,6 +135,8 @@
   }
 
   .platform {
+    display: none;
+    
     input[type="radio"] {
       display: none;
     }
