@@ -81,28 +81,31 @@
     width: 90%;
     margin: 0 auto;
   }
+  
+  .results {
+  
+    .header {
+      opacity: 0.5;
+      overflow: hidden;
+      
+      .explanation { float: left; }
+      .tothetop { float: right; }
+    }
+    
+  }
 
-  ol.results, .allocations ol.shown {
+  ol.results, .allocations ol.shown, .allocations {
     list-style: none;
     padding: 0;
     
-    li {
+    // TODO Florian: Improve the structure.
+    //
+    li, ol.more {
       font-size: 90%;
       background-color: white;
       margin: 0;
       padding: 0 10px 10px;
       border: 1px solid #cccccc;
-      
-      .infos {
-        width: 60%;
-        
-        span.os {
-          padding: 0.2em;
-          font-size: 0.5em;
-          color: white;
-          background-color: black;
-        }
-      }
       
       .text {
         width: 90%;
@@ -112,15 +115,57 @@
         text-align: right;
       }
     }
+    
+    li.result {
+      margin-bottom: -1px;
+      
+      .infos {
+        width: 66%;
+        
+        span.os {
+          padding: 0.2em;
+          font-size: 0.5em;
+          color: white;
+          background-color: black;
+        }
+        
+        // For clippy.
+        //
+        span.version {
+          display: none;
+        }
+        
+        h3 {
+          margin: 0.6em 0 0.2em;
+        }
+        
+        .subspecs {
+          font-size: 0.75em;
+        }
+        
+        p {
+          margin: 0;
+        }
+      }
+    }
   }
   
-  .allocations ol.shown li {
-    padding: 0.5em;
-    margin-bottom: 0.5em;
+  .allocations {
     
-    .text em {
-      color: red;
+    ol.shown li, ol.more {
+      padding: 0.5em;
+      margin-bottom: 0.5em;
+    
+      .text em {
+        color: red;
+      }
     }
+    
+    ol.more {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    
   }
   
   .addination 
