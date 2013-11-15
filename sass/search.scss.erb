@@ -118,8 +118,10 @@
     
     li.result {
       margin-bottom: -1px;
+      overflow: hidden;
       
       .infos {
+        float: left;
         width: 66%;
         
         span.os {
@@ -127,6 +129,8 @@
           font-size: 0.5em;
           color: white;
           background-color: black;
+          margin-left: 1em;
+          vertical-align: middle;
         }
         
         // For clippy.
@@ -140,12 +144,30 @@
         }
         
         .subspecs {
-          font-size: 0.75em;
+          font-size: 0.8em;
         }
         
         p {
           margin: 0;
         }
+      }
+      .actions {
+        float: right;
+        margin-right: 1em;
+        margin-top: 3.5em;
+        
+        a {
+          font-size: 1.3em;
+          color: white;
+          padding: 0.5em 1em;
+          background-color: #dacfcd;
+          margin: 0 0.5em 0 0;
+          
+          &:hover {
+            background-color: #fb0006;
+          }
+        }
+        
       }
     }
   }
