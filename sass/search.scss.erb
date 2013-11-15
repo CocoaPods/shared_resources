@@ -153,8 +153,7 @@
       }
       .actions {
         float: right;
-        margin-right: 1em;
-        margin-top: 3.5em;
+        margin: 3.5em 1em 1em 0em;
         
         a {
           font-size: 1.3em;
@@ -221,3 +220,7 @@
     }
   }
 }
+
+body.ios #search form { margin-top: 0; }
+body.ios #search div.results ol.results li.result .infos { width: 100%; }
+body.ios #search div.results ol.results li.result .actions { margin-top: 1.5em; }
