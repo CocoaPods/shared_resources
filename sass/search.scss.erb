@@ -4,7 +4,7 @@
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   &.active {
-    margin-top:-64px;
+    margin-top:-48px;
     left:0;
     height:100px;
     background-color:white;
@@ -15,7 +15,8 @@
     
     input[type=search] {
       border: none;
-      padding-top:24px;
+      padding-top:32px;
+      padding-bottom:12px;
       height:100px;
     }
   }
@@ -146,6 +147,7 @@
     li.result {
       margin-bottom: -1px;
       overflow: hidden;
+      width:100%;
   
       .infos {
         float: left;
@@ -157,7 +159,7 @@
           color: white;
           background-color: black;
           margin-left: 1em;
-          vertical-align: middle;
+          vertical-align: 35%;
         }
     
         // For clippy.
@@ -168,20 +170,23 @@
     
         h3 {
           margin: 0.6em 0 0.2em;
+          font-weight:normal;
         }
     
-        .subspecs {
-          font-size: 0.8em;
+        .subspecs, .author {
+          display:none;
         }
     
         p {
           margin: 0;
-        }
+          font-size:14px;
+        } 
       }
+      
       .actions {
-        float: right;
-        margin: 3.5em 1em 1em 0em;
-    
+        margin-top:10%;
+        float:right;
+        
         a {
           font-size: 1.3em;
           color: white;
@@ -229,6 +234,9 @@
   .platform {
     display: none;
 
+    margin-top:48px;
+    margin-bottom:24px;
+
     input[type="radio"] {
       display: none;
     }
@@ -239,9 +247,10 @@
     }
   
     label {
-      padding: 10px;
+      padding: 6px 10px;
       border: 1px solid red;
       margin-left: -1px;
+      background-color:white;
     }
   
     label:first-child {
