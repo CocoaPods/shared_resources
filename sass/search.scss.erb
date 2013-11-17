@@ -1,50 +1,72 @@
 @import "vars";
 
-#search
-{
+#search {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 
-  form
-  {
+  &.active {
+    margin-top:-64px;
+    left:0;
+    height:100px;
+    background-color:white;
+    z-index:200;
+    form {
+      margin:0 auto;
+    }
+    
+    input[type=search] {
+      border: none;
+      padding-top:24px;
+      height:100px;
+    }
+  }
+  
+  &.static {
+    position:static;
+  }
+  
+  form {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition:    all 0.3s ease-in-out;
+    -o-transition:      all 0.3s ease-in-out;
+    transition:         all 0.3s ease-in-out;
+    
     display: block;
     position: relative;
     margin: 100px auto 20px;
     -webkit-user-select: none;
 
-    input[type=search]
-    {
+    input[type=search] {
       color: #fb0006;
       text-transform: uppercase;
       display: block;
       margin: 0;
       padding: 0 8px 0 0px;
       width: 100%;
-      height: 52px;
+      height: 1.2em;
       border: 0px solid #98989f;
       border-bottom: 1px solid grey;
       -webkit-appearance: none;
       background: transparent;
-      font-size: 3em;
+      font-size: 4em;
       line-height: 1em;
       box-sizing: border-box;
       -webkit-tap-highlight-color: rgba(0,0,0,0);
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
 
-      &:focus 
-      {
+      &:focus  {
         outline: 0;
       }
-      &::-webkit-input-placeholder
-      {
+      
+      &::-webkit-input-placeholder {
         color: #fb0006;
       }
-      &:-moz-placeholder
-      {
+      
+      &:-moz-placeholder {
         color: #fb0006;
       }  
-      &::-webkit-search-cancel-button
-      {
+      
+      &::-webkit-search-cancel-button {
         z-index: 9;
         position: absolute;
         right: 12px;
@@ -57,12 +79,12 @@
         -webkit-appearance: none;
         cursor:pointer;
       }
-      &::-webkit-search-cancel-button:active
-      {
+      
+      &::-webkit-search-cancel-button:active {
         background-position: 0 0;
       }
-      &::-webkit-search-cancel-button
-      {
+      
+      &::-webkit-search-cancel-button {
       /*  outline: 1px dashed red !important;*/
       }
     }
@@ -76,28 +98,33 @@
     }
   }
   
-  & > div
-  {
+  & > div {
     width: 90%;
     margin: 0 auto;
   }
+}
+
+#results_container {
+  background-color: $search-background-color;
+  
+  .row {
+    padding: 0;
+  }
   
   .results {
-  
     .header {
       opacity: 0.5;
       overflow: hidden;
-      
+  
       .explanation { float: left; }
       .tothetop { float: right; }
     }
-    
   }
 
   ol.results, .allocations ol.shown, .allocations {
     list-style: none;
     padding: 0;
-    
+
     // TODO Florian: Improve the structure.
     //
     li, ol.more {
@@ -106,7 +133,7 @@
       margin: 0;
       padding: 0 10px 10px;
       border: 1px solid #cccccc;
-      
+  
       .text {
         width: 90%;
         float: left;
@@ -115,15 +142,15 @@
         text-align: right;
       }
     }
-    
+
     li.result {
       margin-bottom: -1px;
       overflow: hidden;
-      
+  
       .infos {
         float: left;
         width: 66%;
-        
+    
         span.os {
           padding: 0.2em;
           font-size: 0.5em;
@@ -132,21 +159,21 @@
           margin-left: 1em;
           vertical-align: middle;
         }
-        
+    
         // For clippy.
         //
         span.version {
           display: none;
         }
-        
+    
         h3 {
           margin: 0.6em 0 0.2em;
         }
-        
+    
         .subspecs {
           font-size: 0.8em;
         }
-        
+    
         p {
           margin: 0;
         }
@@ -154,43 +181,42 @@
       .actions {
         float: right;
         margin: 3.5em 1em 1em 0em;
-        
+    
         a {
           font-size: 1.3em;
           color: white;
           padding: 0.5em 1em;
           background-color: #dacfcd;
           margin: 0 0.5em 0 0;
-          
+      
           &:hover {
             background-color: #fb0006;
           }
         }
-        
+    
       }
     }
   }
-  
+
   .allocations {
-    
+
     ol.shown li, ol.more {
       padding: 0.5em;
       margin-bottom: 0.5em;
-    
+
       .text em {
         color: red;
       }
     }
-    
+
     ol.more {
       text-align: center;
       text-transform: uppercase;
     }
-    
+
   }
-  
-  .addination 
-  {
+
+  .addination {
     text-align: center;
     text-transform: uppercase;
     width: 200px;
@@ -202,23 +228,27 @@
 
   .platform {
     display: none;
-    
+
     input[type="radio"] {
       display: none;
     }
+  
     input[type="radio"]:checked + label, label:hover {
       color: white;
       background-color: red;
     }
+  
     label {
       padding: 10px;
       border: 1px solid red;
       margin-left: -1px;
     }
+  
     label:first-child {
       margin-left: 0px;
     }
   }
+
 }
 
 body.ios #search form { margin-top: 0; }
