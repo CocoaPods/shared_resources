@@ -1,8 +1,9 @@
 ruby:
   is_guides = defined? guides
   is_api = defined? api
-  is_blog = false
+  is_blog = defined? site && site.keys
   is_home = defined? home
+
   
   def is_active active
     if active
@@ -22,7 +23,7 @@ nav.navbar.navbar-static-top role="navigation"
         span.icon-bar
         span.icon-bar
 
-      a.navbar-brand href="/"
+      a.navbar-brand href="http://beta.cocoapods.org"
 
     div.collapse.navbar-collapse.navbar-header-collapse
       ul.nav.navbar-nav.navbar-right
