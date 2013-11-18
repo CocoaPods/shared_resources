@@ -11,7 +11,7 @@
     z-index:200;
     
     p {
-      opacity:0;
+      height:0;;
     }
     
     form {
@@ -40,6 +40,14 @@
     position: relative;
     margin: 100px auto 20px;
     -webkit-user-select: none;
+
+    p {
+      -webkit-transition: height 0.3s ease-in-out;
+      -moz-transition:    height 0.3s ease-in-out;
+      -o-transition:      height 0.3s ease-in-out;
+      transition:         height 0.3s ease-in-out;
+      
+    }
 
     input[type=search] {
       color: #fb0006;
