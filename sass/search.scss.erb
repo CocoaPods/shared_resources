@@ -9,6 +9,11 @@
     height:100px;
     background-color:white;
     z-index:200;
+    
+    p {
+      opacity:0;
+    }
+    
     form {
       margin:0 auto;
     }
@@ -26,10 +31,10 @@
   }
   
   form {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition:    all 0.3s ease-in-out;
-    -o-transition:      all 0.3s ease-in-out;
-    transition:         all 0.3s ease-in-out;
+    -webkit-transition: margin-top 0.3s ease-in-out;
+    -moz-transition:    margin-top 0.3s ease-in-out;
+    -o-transition:      margin-top 0.3s ease-in-out;
+    transition:         margin-top 0.3s ease-in-out;
     
     display: block;
     position: relative;
@@ -132,7 +137,7 @@
       font-size: 90%;
       background-color: white;
       margin: 0;
-      padding: 0 10px 10px;
+      padding: 10px;
       border: 1px solid #cccccc;
   
       .text {
@@ -148,10 +153,10 @@
       margin-bottom: -1px;
       overflow: hidden;
       width:100%;
-  
+      display: table;
+      position: static;
+      
       .infos {
-        float: left;
-        width: 66%;
     
         span.os {
           padding: 0.2em;
@@ -169,7 +174,7 @@
         }
     
         h3 {
-          margin: 0.6em 0 0.2em;
+          margin: 0 0 0.2em;
           font-weight:normal;
         }
     
@@ -184,15 +189,17 @@
       }
       
       .actions {
-        margin-top:10%;
-        float:right;
-        
+        padding-top:12px;
+        text-align:right;
+        vertical-align: middle;
+        height:100%;
+
         a {
           font-size: 1.3em;
           color: white;
           padding: 0.5em 1em;
           background-color: #dacfcd;
-          margin: 0 0.5em 0 0;
+          margin: 0 0 0 0.5em;
       
           &:hover {
             background-color: #fb0006;
