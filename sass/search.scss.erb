@@ -50,7 +50,7 @@
     }
 
     input[type=search] {
-      color: #fb0006;
+      color: $cocoapods-highlight-color;
       text-transform: uppercase;
       display: block;
       margin: 0;
@@ -73,11 +73,11 @@
       }
       
       &::-webkit-input-placeholder {
-        color: #fb0006;
+        color: $cocoapods-highlight-color;
       }
       
       &:-moz-placeholder {
-        color: #fb0006;
+        color: $cocoapods-highlight-color;
       }  
       
       &::-webkit-search-cancel-button {
@@ -123,6 +123,15 @@
   
   .row {
     padding: 0;
+  }
+  
+  .no_results {
+    .apology {
+      text-transform: uppercase;
+      font-size: 2em;
+      text-align: center;
+      color: $cocoapods-highlight-color;
+    }
   }
   
   .results {
@@ -210,7 +219,7 @@
           margin: 0 0 0 0.5em;
       
           &:hover {
-            background-color: #fb0006;
+            background-color: $cocoapods-highlight-color;
           }
         }
     
