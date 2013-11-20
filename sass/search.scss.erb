@@ -46,7 +46,6 @@
       -moz-transition:    height 0.3s ease-in-out;
       -o-transition:      height 0.3s ease-in-out;
       transition:         height 0.3s ease-in-out;
-      
     }
 
     input[type=search] {
@@ -122,6 +121,7 @@
   background-color: $search-background-color;
   
   .row {
+    margin: 2em 0;
     padding: 0;
   }
   
@@ -228,11 +228,18 @@
   }
 
   .allocations {
+    font-size: 1.5em;
 
     ol.shown li, ol.more {
       padding: 0.5em;
       margin-bottom: 0.5em;
-
+      cursor: pointer;
+      
+      &:hover {
+        color: white;
+        background-color: $blog-hover-color;
+      }
+      
       .text em {
         color: red;
       }
@@ -258,8 +265,7 @@
   .platform {
     display: none;
 
-    margin-top:48px;
-    margin-bottom:24px;
+    margin-bottom: 1em;
 
     input[type="radio"] {
       display: none;
@@ -273,12 +279,12 @@
     label {
       padding: 6px 10px;
       border: 1px solid red;
-      margin-left: -1px;
+      margin-right: -1px;
       background-color:white;
     }
   
-    label:first-child {
-      margin-left: 0px;
+    label:last-child {
+      margin-right: 0px;
     }
   }
 
