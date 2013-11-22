@@ -257,6 +257,7 @@
     }
   
     label {
+      font-weight: normal;
       padding: 6px 10px;
       border: 1px solid red;
       margin-right: -1px;
@@ -273,6 +274,8 @@
     float: right;
     
     ol {
+      padding: 0;
+      
       & > li {
         float: left;
         cursor: pointer;
@@ -302,12 +305,13 @@
         .count {
           float: right;
         }
-      } 
-    }
-
-    ol.more {
-      text-align: center;
-      text-transform: uppercase;
+      }
+      
+      &.more {
+        float: left;
+        text-align: center;
+        text-transform: uppercase;
+      }
     }
 
   }
