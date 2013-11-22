@@ -144,7 +144,7 @@
     }
   }
 
-  ol.results, .allocations ol.shown, .allocations {
+  ol.results {
     list-style: none;
     padding: 0;
 
@@ -227,31 +227,6 @@
     }
   }
 
-  .allocations {
-    font-size: 1.5em;
-
-    ol.shown li, ol.more {
-      padding: 0.5em;
-      margin-bottom: 0.5em;
-      cursor: pointer;
-      
-      &:hover {
-        color: white;
-        background-color: $blog-hover-color;
-      }
-      
-      .text em {
-        color: red;
-      }
-    }
-
-    ol.more {
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-  }
-
   .addination {
     text-align: center;
     text-transform: uppercase;
@@ -261,10 +236,15 @@
     margin: 20px auto;
     background-color: white;
   }
+  
+  .selection {
+    overflow: hidden;
+  }
 
   .platform {
     display: none;
-
+    
+    float: left;
     margin-bottom: 1em;
 
     input[type="radio"] {
@@ -286,6 +266,50 @@
     label:last-child {
       margin-right: 0px;
     }
+  }
+  
+  .allocations {
+    text-transform: uppercase;
+    float: right;
+    
+    ol {
+      & > li {
+        float: left;
+        cursor: pointer;
+      }
+      
+      li:first-child {
+        margin-left: 0px;
+      }
+      
+      &.shown li, &.more {
+        list-style: none;
+        padding: 6px 10px;
+        border: 1px solid red;
+        margin-left: -1px;
+        background-color:white;
+        overflow: hidden;
+      
+        &:hover {
+          color: white;
+          background-color: red;
+        }
+      
+        .text {
+          float: left;
+          margin-right: 1em;
+        }
+        .count {
+          float: right;
+        }
+      } 
+    }
+
+    ol.more {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
   }
 
 }
