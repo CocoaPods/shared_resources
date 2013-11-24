@@ -49,11 +49,17 @@
     }
 
     input[type=search] {
+      -webkit-transition: padding 0.3s ease-in-out;
+      -moz-transition:    padding 0.3s ease-in-out;
+      -o-transition:      padding 0.3s ease-in-out;
+      transition:         padding 0.3s ease-in-out;      
+      
       color: $cocoapods-highlight-color;
       text-transform: uppercase;
       display: block;
       margin: 0;
-      padding: 0 8px 0 0px;
+      padding: 160px 0px 0.7em 0px;
+      
       width: 100%;
       height: 1.2em;
       border: 0px solid #98989f;
@@ -154,6 +160,7 @@
   ol.results {
     list-style: none;
     padding: 0;
+    margin-bottom: 48px;
 
     // TODO Florian: Improve the structure.
     //
@@ -176,10 +183,6 @@
     li.result {
       margin-bottom: -1px;
       overflow: hidden;
-      width:100%;
-      display: table;
-      position: static;
-      
       .infos {
     
         span.os {
@@ -200,6 +203,8 @@
         h3 {
           margin: 0 0 0.2em;
           font-weight:normal;
+          word-wrap:break-word;
+          
         }
     
         .subspecs, .author {
@@ -227,6 +232,7 @@
       
           &:hover {
             background-color: $cocoapods-highlight-color;
+            text-decoration:none;
           }
         }
     
@@ -333,6 +339,26 @@
 
 }
 
-body.ios #search form { margin-top: 0; }
-body.ios #search div.results ol.results li.result .infos { width: 100%; }
-body.ios #search div.results ol.results li.result .actions { margin-top: 1.5em; }
+@media (max-width:768px){
+  #results_container {
+    form { 
+      margin-top: 0; 
+    }
+
+    div.results ol.results li.result {
+      h3 {
+        font-size: 16px;
+      }
+      
+     .infos { 
+       width: 100%;
+       padding:0; 
+     } 
+     
+     .actions { 
+       margin: 0.5em 0;
+       text-align:center;
+      }
+    }
+  }
+}

@@ -1,10 +1,44 @@
 @import "vars";
 
 ul.underscore {
-  li {
-    border-bottom:2px black solid;
+  margin-top:48px;
+  margin-bottom:48px;
+  border-bottom: 1px black solid;
+  width:120%;
+  margin-left:-10%;
+  
+  
+  > li {
     width:33.3%;
-    text-align:center;
+    margin:0;
+    
+    &.active a, &.active:hover a {
+      background-color: $content-background-color;
+      border:none;
+      color: black;
+    }
+    
+    a {
+      text-align:center;
+      margin:0;
+      border:none;
+      text-transform:uppercase;
+      color: darkgrey;
+      font-size:1.5em;
+      
+      &:hover {
+        background-color: $content-background-color;
+        border:none;
+        color: black;
+      };
+    }
+  }
+}
+
+@media (max-width:768px){
+  ul.underscore {
+    width:100%;
+    margin:0%;
   }
 }
 
@@ -17,9 +51,10 @@ ul.underscore {
 
 .homepage_container {
 
-  h3 {
+  h3.underlined {
     text-align:center;
     text-transform:uppercase;
     font-weight:normal;
+    
   }
 }
