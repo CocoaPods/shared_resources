@@ -3,8 +3,8 @@ ruby:
   is_api = defined? api
   is_blog = defined? site 
   is_home = defined? home && page
-  is_about = defined? home && page[:path]
-  
+  is_about = (defined? home) && home == true && page[:path]
+
   def is_active active
     if active
       { :class => "active" }
@@ -28,7 +28,7 @@ nav.navbar.navbar-static-top role="navigation"
     div.collapse.navbar-collapse.navbar-header-collapse
       ul.nav.navbar-nav.navbar-right
 
-        li *is_active(is_home)
+        li *is_active(is_about)
           a href="http://beta.cocoapods.org/about" == "About"
         
         li *is_active(is_guides)
