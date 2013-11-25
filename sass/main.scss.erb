@@ -380,10 +380,25 @@ footer {
   background-size: 30px 30px;
 }
 
-@media (max-width:800px){
-  footer.footer-links .cocoapods-small-logo {
-    position:static;
+// Modifications for iOS
+
+@media (max-width:768px){
+
+  // Give the footers horizontal breathing room
+  footer.page-footer {
+     padding:0 20px;
   }
+  
+  // Breathing Room, and move logo above
+  footer.footer-links {
+    padding:0 20px;
+
+   .cocoapods-small-logo {
+      position:static;
+    }
+  }
+  
+  
 }
 
 @media (max-width: 1000px){
