@@ -183,11 +183,10 @@ a {
 
 $divider-color: #bbb;
 
-
 @mixin arrow-down($size, $color) {
-	border-left: $size solid transparent;
-	border-right: $size solid transparent;
-	border-top: $size solid $color;
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-top: $size solid $color;
 
   height: 0;
   margin: 0 auto;
@@ -198,7 +197,7 @@ $divider-color: #bbb;
   background-color: $divider-color;
   box-shadow: 1px 1px 1px #ddd;
   display: block;
-  height: 1px;
+  height: 2px;
   margin: 0 auto;
   width: 50%;
 }
@@ -209,8 +208,9 @@ $divider-color: #bbb;
 }
 
 .arrow-down {
-  @include arrow-down(15px, $divider-color);
+  @include arrow-down(15px, black);
 }
+
 
 #content-wrapper {
   background-color: $content-background-color;
@@ -383,21 +383,10 @@ footer {
 // Modifications for iOS
 
 @media (max-width:768px){
-
-  // Give the footers horizontal breathing room
-  footer.page-footer {
-     padding:0 20px;
-  }
   
-  // Breathing Room, and move logo above
-  footer.footer-links {
-    padding:0 20px;
-
-   .cocoapods-small-logo {
+  footer.footer-links  .cocoapods-small-logo {
       position:static;
-    }
   }
-  
   
 }
 

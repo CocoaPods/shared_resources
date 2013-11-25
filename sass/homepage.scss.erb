@@ -2,7 +2,7 @@
 
 ul.underscore {
   margin-top:48px;
-  margin-bottom:48px;
+  margin-bottom: -1px;
   border-bottom: 1px black solid;
   width:120%;
   margin-left:-10%;
@@ -57,4 +57,48 @@ ul.underscore {
     font-weight:normal;
     
   }
+}
+
+
+@mixin arrow-down($size, $color) {
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-top: $size solid $color;
+
+  height: 0;
+  margin: 0 auto;
+  width: 0;
+}
+
+.index-enclosed-arrow-down {
+  @include arrow-down(14px, $content-background-color);
+  margin-top:-15px;
+}
+
+.index-arrow-down {
+  @include arrow-down(15px, black);
+}
+
+.index-horizontal-divider {
+  background-color: black;
+  display: block;
+  height: 1px;
+  width: 20%;
+}
+
+.header-horizontal-divider{
+  background-color: black;
+  display: block;
+  height: 1px;
+  width: 40%;
+  margin: 0 auto 48px;
+}
+
+#homepage-tab-indicator {
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  -moz-transition:    margin-left 0.3s ease-in-out;
+  -o-transition:      margin-left 0.3s ease-in-out;
+  transition:         margin-left 0.3s ease-in-out;
+  
+  margin-bottom: 60px;
 }
