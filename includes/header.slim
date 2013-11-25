@@ -3,9 +3,8 @@ ruby:
   is_api = defined? api
   is_blog = defined? Jekyll 
   is_home = defined? home && page
-  is_about = (defined? home) && home == true && page[:path]
+  is_about = (defined? home) && home == true && (defined? page) && page[:path]
 
-  
 
   def is_active active
     if active
