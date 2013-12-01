@@ -9,6 +9,7 @@
     height:100px;
     background-color:white;
     z-index:200;
+    clear:left; 
     
     p {
       opacity:0;
@@ -53,6 +54,11 @@
       -moz-transition:    padding 0.3s ease-in-out;
       -o-transition:      padding 0.3s ease-in-out;
       transition:         padding 0.3s ease-in-out;      
+
+      -webkit-transition: margin 0.3s ease-in-out;
+      -moz-transition:    margin 0.3s ease-in-out;
+      -o-transition:      margin 0.3s ease-in-out;
+      transition:         margin 0.3s ease-in-out;      
       
       color: $cocoapods-highlight-color;
       text-transform: uppercase;
@@ -123,6 +129,7 @@
   }
 }
 
+
 #results_container.active {
   padding-top: 2em;
   background-color: $search-background-color;
@@ -168,7 +175,7 @@
       font-size: 90%;
       background-color: white;
       margin: 0;
-      padding: 10px;
+
       border: 1px solid #cccccc;
   
       .text {
@@ -189,7 +196,8 @@
       }
       
       .infos {
-    
+        padding: 12px;
+        
         span.os {
           padding: 0.2em;
           font-size: 0.5em;
@@ -231,11 +239,9 @@
         } 
       }
       
+      
       .actions {
-        padding-top:12px;
         text-align:right;
-        vertical-align: middle;
-        height:100%;
 
         a {
           font-size: 1.3em;
@@ -350,18 +356,60 @@
     }
 
   }
+}
 
+// Deal with vertical centering as this is complex it's kept together - ./
+// Works as a combination of http://vanseodesign.com/blog/demo/vertical-centering/positioning-stretch.php
+// and an absolute right aligned block
+
+#results_container ol.results li.result {
+  position:relative;
+  
+  .action-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right:12px;
+    margin: auto;
+    height: 30%;
+  }
+
+  .actions {
+    padding-right:12px;
+    vertical-align: middle;
+    height:100%;
+  
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+}
+
+
+@media (max-width:1000px){
+  #results_container {
+    ol.results li.result .actions a {
+      padding: 0.5em 0.5em;
+    }
+  }
 }
 
 @media (max-width:768px){
-  
+   
   // Make the OS selector centered and smaller
-  #results_container .selection {
-    font-size:10px;
-    text-align:center;
+  #results_container {
+    ol.results li.result .actions a {
+      padding: 0.5em 0.5em;
+    }
     
-    .platform {
-      float:none;
+    .selection {
+      font-size:10px;
+      text-align:center;
+    
+      .platform {
+        float:none;
+      }
     }
   }
   #search form {
