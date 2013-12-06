@@ -80,7 +80,7 @@ a {
     padding-right:8px;
     height: 50px;
     letter-spacing: 1.2pt;
-    
+        
     &:hover,
     &:focus {
       color: $nav-color;      
@@ -119,7 +119,15 @@ a {
 }
 
 .navbar-toggle {
-  border-color: $background-color;
+  border-color: none;
+  height:32px;
+
+  .glyphicon-plus {
+    font-size:3em;
+    color:white;
+    margin-top:-20px;
+  }
+  
   &:hover,
   &:focus {
     background-color: $background-color;
