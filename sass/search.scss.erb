@@ -6,7 +6,6 @@
   &.active {
     margin-top:-48px;
     left:0;
-    height:100px;
     background-color:white;
     z-index:200;
     clear:left; 
@@ -16,7 +15,11 @@
     }
     
     form {
-      margin:0 auto;
+      height:100px;
+      
+      fieldset {
+        bottom: -3.5em;
+      }
     }
     
     input[type=search] {
@@ -30,23 +33,32 @@
   &.static {
     position:static;
   }
-  
+    
   form {
-    -webkit-transition: margin-top 0.3s ease-in-out;
-    -moz-transition:    margin-top 0.3s ease-in-out;
-    -o-transition:      margin-top 0.3s ease-in-out;
-    transition:         margin-top 0.3s ease-in-out;
+    -webkit-transition: height 0.3s ease-in-out;
+    -moz-transition:    height 0.3s ease-in-out;
+    -o-transition:      height 0.3s ease-in-out;
+    transition:         height 0.3s ease-in-out;
+    
+    height:320px;
     
     display: block;
     position: relative;
-    margin: 100px auto 20px;
     -webkit-user-select: none;
+    cursor:text;
+
+    fieldset {
+      position: absolute;
+      bottom: 16px;
+      width:100%;
+    }
 
     p {
       -webkit-transition: opacity 0.3s ease-in-out;
       -moz-transition:    opacity 0.3s ease-in-out;
       -o-transition:      opacity 0.3s ease-in-out;
       transition:         opacity 0.3s ease-in-out;
+      margin-bottom:0px;
     }
 
     input[type=search] {
@@ -64,20 +76,18 @@
       text-transform: uppercase;
       display: block;
       margin: 0;
-      padding: 160px 0px 0.7em 0px;
       
       width: 100%;
       height: 1.2em;
+      
       border: 0px solid #98989f;
       border-bottom: 1px solid grey;
-      -webkit-appearance: none;
       background: transparent;
       font-size: 4em;
-      line-height: 1em;
-      box-sizing: border-box;
+
+      -webkit-appearance: none;
       -webkit-tap-highlight-color: rgba(0,0,0,0);
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
+
 
       &:focus  {
         outline: 0;
@@ -406,6 +416,10 @@
       padding: 0.5em 0.5em;
     }
     
+    .result {
+      padding: 12px;
+    }
+    
     .selection {
       font-size:10px;
       text-align:center;
@@ -415,12 +429,12 @@
       }
     }
   }
+  
   #search form {
-    
-     margin: 40px auto 20px;
+    height:240px;
+    margin: 12px;
     
     input[type=search] {
-      padding: 40px 0px 0.7em 0px;
       font-size:32px;
     }
     
