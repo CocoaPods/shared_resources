@@ -17,6 +17,10 @@ h1, h2, h3 {
   font-weight:bold;
 }
 
+h2 {
+  margin-top:40px;
+}
+
 h5 {
   font-size:22px;
 }
@@ -38,10 +42,10 @@ pre.highlight {
   border-bottom: none;
   padding-left: 20px;
   margin-bottom: 0;
-  border-radius: 0px; 
+  border-radius: 0px;
 }
 
-p {
+p, ol, ul {
   font-size: 18px;
   line-height: 1.4em;
   margin: 24px 0 32px;
@@ -49,7 +53,7 @@ p {
 
 a {
   color:  $cocoapods-highlight-color;
-  
+
   &:hover, &:focus {
     color: $blog-hover-color;
   }
@@ -62,7 +66,7 @@ a {
   border: none;
   margin: 0;
   padding: 0;
-  
+
   -webkit-transition: opacity 0.3s ease-in-out;
   -moz-transition:    opacity 0.3s ease-in-out;
   -o-transition:      opacity 0.3s ease-in-out;
@@ -80,15 +84,15 @@ a {
     padding-right:8px;
     height: 50px;
     letter-spacing: 1.2pt;
-        
+
     &:hover,
     &:focus {
-      color: $nav-color;      
+      color: $nav-color;
       background-color: $base-color;
       padding-bottom: 5px;
       border-bottom: 4px  $cocoapods-highlight-color solid;
     }
-    
+
     &:active {
       color: lighten($nav-color, 10%);
     }
@@ -98,15 +102,15 @@ a {
     border-top: 6px $base-color solid;
     padding-top: 8px;
     background-color:  $cocoapods-highlight-color;
-    color: $nav-color;      
+    color: $nav-color;
     font-weight: bold;
     cursor:default;
-    
+
     &:hover,
     &:focus {
       background-color:  $cocoapods-highlight-color;
-      color: $nav-color;      
-      
+      color: $nav-color;
+
     }
   }
 }
@@ -152,7 +156,7 @@ a {
 
 .headline.index {
   text-align: center;
-  
+
   h1 {
     font-size: 72px;
     padding-top: 110px;
@@ -164,7 +168,7 @@ a {
     -mr-user-select: none;
     user-select: none;
     font-weight:normal;
-    
+
     cursor: default;
   }
 }
@@ -176,7 +180,7 @@ a {
     &.index h1{
       padding-top: 30px;
     }
-    
+
     &.blog-post h1 {
       font-size:32px;
     }
@@ -224,7 +228,7 @@ $divider-color: #bbb;
   background-color: $content-background-color;
   margin: 0;
   padding: 0;
-  
+
   img {
     max-width:100%;
   }
@@ -252,7 +256,7 @@ a#pull-request {
   border: 1px solid  $cocoapods-highlight-color;
   border-radius: 6px;
   -webkit-box-shadow: none;
-  box-shadow: none; 
+  box-shadow: none;
 }
 
 .popover.top .arrow {
@@ -266,16 +270,16 @@ a#pull-request {
   li {
     list-style-type: none;
     padding-left:8px;
-    
+
     a {
       display:block;
     }
     &:hover {
       border-left:2px solid  $cocoapods-highlight-color;
       padding-left:6px;
-      
+
     }
-  }  
+  }
 }
 
 footer {
@@ -283,71 +287,71 @@ footer {
     padding: 30px 0;
     background-color: $footer-background-color;
     color:white;
-    
+
     .contributors {
       font-size:24px;
     }
-  
+
     .sponsors {
       font-size:20px;
       margin-bottom:0px;
     }
-  
+
     h4 {
       text-transform:uppercase;
       color:$highlight-on-dark-background-color;
       font-size:14px;
-      margin-bottom: 0px; 
+      margin-bottom: 0px;
     }
-  
+
     p {
       margin:0 0 20px;
       font-size:18px;
     }
-  
+
     article.minor p {
       margin:0 0 14px;
-      font-size:14px;    
+      font-size:14px;
     }
-  
+
     a:hover, a:focus {
       color: $footer-link-hover-color;
     }
   }
-  
+
   &.footer-links {
     background-color:$secondary-red;
     ul {
       margin-left:-16px;
       padding-left:0;
     }
-    
+
     li {
       border-right: 2px solid rgba( $cocoapods-highlight-color, 0.5);
       list-style-type: none;
       font-size:12px;
       padding-bottom: 6px;
-     
+
       &:hover {
         border-right: 2px solid  $cocoapods-highlight-color;
       }
-      
+
       a {
         color: white;
       }
     }
-    
+
     .cocoapods-small-logo {
       display:block;
       position:absolute;
       top: 2px;
       left: -70px;
       margin-bottom: 12px;
-      
+
       background: url(<%= asset_data_uri "CocoaPods-Logo-Mini.png" %>) no-repeat left center;
       height: 36px;
       width: 36px;
-      background-size: 36px 36px; 
+      background-size: 36px 36px;
     }
   }
 }
@@ -380,11 +384,11 @@ footer {
 // Modifications for iOS
 
 @media (max-width:768px){
-  
+
   footer.footer-links  .cocoapods-small-logo {
       position:static;
   }
-  
+
 }
 
 @media (max-width: 1000px){
@@ -397,7 +401,7 @@ footer {
   .hidden-lg-span {
     display:none;
   }
-  
+
   .visible-lg-span {
     display:inline;
   }
