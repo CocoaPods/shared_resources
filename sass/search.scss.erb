@@ -11,14 +11,14 @@
     clear:left; 
     
     p {
-      opacity:0;
+      display:none;
     }
     
     form {
       height:100px;
       
       fieldset {
-        bottom: -3.5em;
+        bottom: 0em;
       }
     }
     
@@ -54,11 +54,11 @@
     }
 
     p {
-      -webkit-transition: opacity 0.3s ease-in-out;
-      -moz-transition:    opacity 0.3s ease-in-out;
-      -o-transition:      opacity 0.3s ease-in-out;
-      transition:         opacity 0.3s ease-in-out;
-      margin-bottom:0px;
+      -webkit-transition: display;
+      -moz-transition:    display;
+      -o-transition:      display;
+      transition:         display;
+      margin-bottom: 0px;
     }
 
     input[type=search] {
@@ -112,7 +112,7 @@
         padding: 0;
         background: url(/stylesheets/images/cancel.svg);
         -webkit-appearance: none;
-        cursor:pointer;
+        cursor: pointer;
       }
       
       &::-webkit-search-cancel-button:active {
@@ -150,12 +150,6 @@
 }
 
 #results_container {
-  
-  /* Fix for increased font size in main.scss.erb */
-  p, ol, ul {
-    font-size: 1em;
-    margin: 0em;
-  }
   
   .row {
     padding: 0;
@@ -299,8 +293,8 @@
   .selection {
     overflow: hidden;
     
-    li, label {
-      cursor: pointer!important;
+    li *, label *, li, label {
+      cursor: pointer;
     }
   }
 
