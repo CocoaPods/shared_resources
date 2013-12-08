@@ -1,4 +1,4 @@
-ruby:
+ruby:  
   is_guides = defined? guides
   is_api = defined? api
   is_blog = defined? Jekyll 
@@ -7,11 +7,8 @@ ruby:
 
 
   def is_active active
-    if active
-      { :class => "active" }
-    else
-      {}
-    end
+    return { :class => "active" } if active
+    {}
   end
   
 nav.navbar.navbar-static-top role="navigation"
