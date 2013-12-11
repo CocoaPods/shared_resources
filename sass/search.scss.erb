@@ -83,7 +83,7 @@
       border: 0px solid #98989f;
       border-bottom: 1px solid grey;
       background: transparent;
-      font-size: 4em;
+      font-size: 3em;
 
       -webkit-appearance: none;
       -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -126,7 +126,7 @@
     
     span.amount {
       color: gray;
-      font-size: 2.5em;
+      font-size: 2em;
       position: absolute;
       right: 1.5em;
       top: 38px;
@@ -158,7 +158,7 @@
   .no_results {
     .apology {
       text-transform: uppercase;
-      font-size: 2em;
+      font-size: 1.6em;
       text-align: center;
       color: $cocoapods-highlight-color;
     }
@@ -166,9 +166,11 @@
   
   .results {
     .header {
+      font-size: 0.8em;
       opacity: 0.5;
       overflow: hidden;
-  
+      margin-top: 0.5em;
+      
       .explanation { float: left; }
       .tothetop { float: right; }
     }
@@ -177,6 +179,7 @@
   ol.results {
     list-style: none;
     padding: 0;
+    margin: 0;
 
     // TODO Florian: Improve the structure.
     //
@@ -291,9 +294,12 @@
   }
   
   .selection {
+    font-size: 0.8em;
     overflow: hidden;
+    margin-bottom: 0.5em;
     
-    li *, label *, li, label {
+    li, label, ol {
+      margin: 0;
       cursor: pointer;
     }
   }
@@ -301,7 +307,6 @@
   .platform {
     display: none;
     float: left;
-    margin-bottom: 1em;
 
     input[type="radio"] {
       display: none;
@@ -334,7 +339,6 @@
       padding: 0;
       
       & > li {
-        margin-bottom: 5px;
         float: left;
       }
       
@@ -450,11 +454,11 @@
     margin: 12px;
     
     input[type=search] {
-      font-size:32px;
+      font-size:1.75em;
     }
     
     p {
-      font-size:0.9em;
+      font-size:0.8em;
     } 
   }
   
