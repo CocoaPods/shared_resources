@@ -35,11 +35,6 @@
   }
     
   form {
-    -webkit-transition: height 0.3s ease-in-out;
-    -moz-transition:    height 0.3s ease-in-out;
-    -o-transition:      height 0.3s ease-in-out;
-    transition:         height 0.3s ease-in-out;
-    
     height:320px;
     
     display: block;
@@ -54,24 +49,10 @@
     }
 
     p {
-      -webkit-transition: display;
-      -moz-transition:    display;
-      -o-transition:      display;
-      transition:         display;
       margin-bottom: 0px;
     }
 
     input[type=search] {
-      -webkit-transition: padding 0.3s ease-in-out;
-      -moz-transition:    padding 0.3s ease-in-out;
-      -o-transition:      padding 0.3s ease-in-out;
-      transition:         padding 0.3s ease-in-out;      
-
-      -webkit-transition: margin 0.3s ease-in-out;
-      -moz-transition:    margin 0.3s ease-in-out;
-      -o-transition:      margin 0.3s ease-in-out;
-      transition:         margin 0.3s ease-in-out;      
-      
       color: $cocoapods-highlight-color;
       text-transform: uppercase;
       display: block;
@@ -104,8 +85,8 @@
       &::-webkit-search-cancel-button {
         z-index: 9;
         position: absolute;
-        right: 12px;
-        top: 46px;
+        right: 0.3em;
+        top: 0.5em;
         width: 32px;
         height: 32px;
         margin: 0;
@@ -118,10 +99,6 @@
       &::-webkit-search-cancel-button:active {
         background-position: 0 0;
       }
-      
-      &::-webkit-search-cancel-button {
-      /*  outline: 1px dashed red !important;*/
-      }
     }
     
     span.amount {
@@ -129,7 +106,7 @@
       font-size: 2em;
       position: absolute;
       right: 1.5em;
-      top: 38px;
+      top: 0.5em;
     }
   }
   
