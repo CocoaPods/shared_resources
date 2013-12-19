@@ -12,7 +12,7 @@ section id="post-info" class="container"
           header
             h4 Previous Post
           h3 = @previous.title
-          p = @config["authors"][@previous.data["author"]]["name"]
+          p = "By " + @config["authors"][@previous.data["author"]]["name"]
           a.back_chevron_placeholder
         
     article class="content col-6 col-sm-6 col-md-4 previous"  
