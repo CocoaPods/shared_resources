@@ -187,6 +187,10 @@
       .infos {
         padding: 12px;
         
+        span.version {
+          margin:0 0.5em;
+        }
+        
         span.os {
           padding: 0.2em;
           font-size: 0.5em;
@@ -387,6 +391,21 @@
   }
 }
 
+// Custom styling for the copy to clipboard UI
+
+.popover {
+  h4 {
+    text-align:center;
+  }
+  code {
+    font-size:0.8em;
+  }
+  
+  &.saved code {
+    opacity:0.3;
+  }
+}
+
 
 @media (max-width:1000px){
   #results_container {
@@ -487,12 +506,14 @@
     }
   }
   
-  .homepage_container .underscore  {
-    li a {
-      font-size: 0.9em;
-    }
-    & li:first-child a {
-      padding-top:1.45em;
-    };
+  .homepage_container .underscore li a {
+    font-size: 0.9em;
   }
 }
+
+@media (max-width:460px){
+  .homepage_container .underscore li:first-child a {
+    padding-top:1.45em;
+  }
+}
+
