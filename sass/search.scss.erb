@@ -396,7 +396,11 @@
   }
 }
 
+// Basically iPhone stuff
+
 @media (max-width:768px){
+  
+  // Results
    #search_results {
      padding:0;
      
@@ -404,6 +408,7 @@
        margin: 0.6em auto;
      }
    }
+   
   // Make the OS selector centered and smaller
   #results_container {
     
@@ -413,6 +418,10 @@
     
     .result {
       padding: 0.66em;
+
+      img.copy {
+        display:none;
+      }
     }
     
     .selection {
@@ -425,17 +434,29 @@
     }
   }
   
+  // Change the size of the form
   #search form {
-    height: 13.33em;
+    height: 6em;
     margin: 0.66em;
     
-    input[type=search] {
-      font-size: 1.75em;
-    }
+    fieldset {
+      bottom: 2px;
+      
+      input[type=search] {
+        font-size: 1.75em;
+        height: 2em;
+        padding:0;
+      }
     
-    p {
-      font-size: 1em;
-    } 
+      span.amount {
+        top: 0.18em; 
+      }
+    
+      p {
+        font-size: 0.75em;
+        margin-bottom:0.1em;
+      }       
+    }
   }
   
   #results_container {
@@ -463,5 +484,14 @@
         }
       }
     }
+  }
+  
+  .homepage_container .underscore  {
+    li a {
+      font-size: 0.9em;
+    }
+    & li:first-child a {
+      padding-top:1.45em;
+    };
   }
 }
