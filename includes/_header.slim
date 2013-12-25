@@ -1,5 +1,5 @@
 ruby:  
-  is_about = request.path =~ /\Aabout/
+  is_about = (defined? request) && request.path =~ /\Aabout/
   is_guides = defined? guides
   is_blog = defined? Jekyll 
   
