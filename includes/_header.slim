@@ -1,14 +1,10 @@
 ruby:  
+  is_about = request.path =~ /\Aabout/
   is_guides = defined? guides
-  is_api = defined? api
   is_blog = defined? Jekyll 
-  is_home = defined? home && page
-  is_about = (defined? home) && home == true && (defined? page) && page[:path]
-
-
-  def is_active active
-    return { :class => "active" } if active
-    {}
+  
+  def is_active(page)
+    page ? { :class => "active" } : {}
   end
   
 nav.navbar.navbar-static-top role="navigation"
