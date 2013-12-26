@@ -1,5 +1,7 @@
 ruby:  
   is_about = (defined? request) && request.path =~ /\Aabout/
+  is_homepage = (defined? request) && request.path == "index.html"
+
   is_guides = defined? guides
   is_blog = defined? Jekyll 
   
@@ -15,7 +17,7 @@ nav.navbar.navbar-static-top role="navigation"
         span.sr-only == "Toggle navigation"
         span.glyphicon-plus
  
-      a.navbar-brand href="http://beta.cocoapods.org"
+      a.navbar-brand *is_active(is_homepage) href="http://beta.cocoapods.org"
 
     div.collapse.navbar-collapse.navbar-header-collapse
       ul.nav.navbar-nav.navbar-right
