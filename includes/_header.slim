@@ -1,6 +1,6 @@
 ruby:  
+  is_homepage = !(defined? guides) && (defined? request) && request.path == "index.html"
   is_about = (defined? request) && request.path =~ /\Aabout/
-  is_homepage = (defined? request) && request.path == "index.html"
 
   is_guides = defined? guides
   is_blog = defined? Jekyll 
@@ -12,7 +12,7 @@ ruby:
 nav.navbar.navbar-static-top role="navigation"
   section.container
     div.navbar-header
-    
+      
       button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-header-collapse"
         span.sr-only == "Toggle navigation"
         span.glyphicon-plus
