@@ -80,6 +80,7 @@ html.flash {
   border: none;
   margin: 0;
   padding: 0;
+  min-height: 48px;
 
   -webkit-transition: opacity 0.3s ease-in-out;
   -moz-transition:    opacity 0.3s ease-in-out;
@@ -92,11 +93,11 @@ html.flash {
     font-size: 0.9em;
     color: $background-color;
     text-transform: uppercase;
-    padding-top: 14px;
+    padding-top: 12px;
     padding-bottom:6px;
     padding-left:8px;
     padding-right:8px;
-    height: 50px;
+    height: 48px;
     letter-spacing: 1.2pt;
 
     &:hover,
@@ -130,10 +131,17 @@ html.flash {
 }
 
 .navbar-brand {
-  background: url(<%= asset_data_uri "CocoaPods-Logo-Beta.png" %>) no-repeat left center;
+  background: url(<%= asset_data_uri "CocoaPods-Logo.png" %>) no-repeat left center;
+  width: 166px;
   height: 48px;
-  width: 220px;
-  background-size: 220px 48px;
+  background-size: 166px 48px;
+}
+
+.navbar-brand.active {
+  background: url(<%= asset_data_uri "CocoaPods-Logo-Active.png" %>) no-repeat left bottom;  
+  width: 166px;
+  height: 48px;
+  background-size: 166px 48px;
 }
 
 .navbar-toggle {
@@ -222,7 +230,7 @@ $divider-color: #bbb;
   background-color: $divider-color;
   box-shadow: 1px 1px 1px #ddd;
   display: block;
-  height: 2px;
+  height: 1px;
   margin: 0 auto;
   width: 50%;
 }
@@ -233,7 +241,7 @@ $divider-color: #bbb;
 }
 
 .arrow-down {
-  @include arrow-down(15px, black);
+  @include arrow-down(15px, #bbbbbb);
 }
 
 
