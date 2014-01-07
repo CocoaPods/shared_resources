@@ -6,5 +6,5 @@
 
 
 $(document).ready(function () {
-    $('#pull-request').popover()
+    $('#pull-request, #archives' ).popover()
 })

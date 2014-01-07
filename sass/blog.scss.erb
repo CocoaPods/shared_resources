@@ -119,3 +119,45 @@ footer.page-footer {
   color:white;
 }
 
+.chevron_placeholder {
+  &.next {
+    top: 0px;
+    right: -30px;
+    background: url(<%= asset_data_uri "blog_chevron_next.png" %>) no-repeat 8px 40px;
+    background-size: 9px 18px;    
+  }
+  
+  &.back {
+    top: 0px;
+    left: -30px;
+    background: url(<%= asset_data_uri "blog_chevron_previous.png" %>) no-repeat 17px 40px;
+    background-size: 9px 18px;
+  }
+  
+  display:block;
+  position:absolute;
+  background-color:blue;
+
+  height: 100%;
+  width: 35px;
+  font-weight:bold;
+}
+
+@media (max-width:768px){
+  .chevron_placeholder {
+    display:none;
+  }
+}
+
+#blog-archives p, #blog-archives a {
+  display:inline-block;
+}
+
+a#archives {
+  background: url(<%= asset_data_uri "archives.png" %>) no-repeat left center;
+  height: 50px;
+  width: 50px;
+  background-size: 50px 50px;
+  float:right;
+  margin-right:8px;
+}

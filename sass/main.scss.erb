@@ -230,7 +230,7 @@ $divider-color: #bbb;
   background-color: $divider-color;
   box-shadow: 1px 1px 1px #ddd;
   display: block;
-  height: 2px;
+  height: 1px;
   margin: 0 auto;
   width: 50%;
 }
@@ -241,7 +241,7 @@ $divider-color: #bbb;
 }
 
 .arrow-down {
-  @include arrow-down(15px, black);
+  @include arrow-down(15px, #bbbbbb);
 }
 
 
@@ -375,31 +375,6 @@ footer {
     }
   }
 }
-
-
-// TODO: Style chevron
-
-//.next_chevron_placeholder {
-//  display:block;
-//  position:absolute;
-//  top: 30px;
-//  left: 300px;
-//  background: url(<%= asset_data_uri "next_chevron_placeholder.png" %>) no-repeat left center;
-//  height: 30px;
-//  width: 30px;
-//  background-size: 30px 30px;
-//}
-//
-//.back_chevron_placeholder {
-//  display:block;
-//  position:absolute;
-//  top: 30px;
-//  right: 305px;
-//  background: url(<%= asset_data_uri "back_chevron_placeholder.png" %>) no-repeat left center;
-//  height: 30px;
-//  width: 30px;
-//  background-size: 30px 30px;
-//}
 
 // Modifications for iOS
 
