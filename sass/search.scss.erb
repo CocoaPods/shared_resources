@@ -149,7 +149,25 @@
       margin-top: 0.5em;
       
       .explanation { float: left; }
-      .tothetop { float: right; }
+      .tothetop {
+        float: right;
+        margin-top: 0.2em;
+      
+        a {
+          width: 1.5em;
+          display: block;
+          text-align: center;
+          font-size: 1.4em;
+          font-weight: bold;
+          background-color: white;
+          border-radius: 1em;
+          text-decoration: none;
+        }
+        a:hover {
+          width: 3em;
+          &:after { content: ' UP' };
+        }
+      }
     }
   }
 
