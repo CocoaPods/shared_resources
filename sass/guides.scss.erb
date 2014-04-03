@@ -12,9 +12,9 @@
   background-color: $content-background-color;
 
   #pull-request {
-    margin-top: -12px; 
+    margin-top: -12px;
   }
-  
+
   .row {
     padding:0;
   }
@@ -38,7 +38,7 @@
     a {
       word-wrap: break-word;
     }
-    
+
     li.active > a {
       background-color: $cocoapods-highlight-color;;
       color: white;
@@ -48,50 +48,66 @@
       margin:8px 0 0 0;
       font-size: 16px;
     }
-    
+
     ul ul {
       margin: 0px 0 4px 0;
       font-size: 14px;
-      
+
       li {
         padding-left: 12px;
         margin:0;
-        text-overflow:ellipsis; 
-        
+        text-overflow:ellipsis;
+
       }
     }
   }
 }
 
 #content-wrapper {
-  
+
   .header-link {
     content: "<";
-    color: white;
+    color: $cocoapods-highlight-color;
     position: absolute;
     left:-0.3em;
-    
+
+    display: block;
+    padding-right: 6px;
+    padding-left: 30px;
+    margin-left: -30px;
+    cursor: pointer;
+
     &:hover {
       text-decoration:none;
-      color: $cocoapods-highlight-color;
     }
   }
-  
+
+  h1, h2, h3, h4 {
+    .header-link {
+      display:none;
+    }
+    &:hover {
+      .header-link {
+        display:inline-block;
+      }
+    }
+  }
+
   #tab-content {
     h2 {
       margin-top: 20px;
-      margin-bottom: 10px; 
+      margin-bottom: 10px;
     }
-    
+
     pre {
       background-color:white;
       border:none;
     }
-    
+
     blockquote {
       margin: 6px 0;
     }
-    
+
     hr {
       border-color:white;
       border-width:4px;
@@ -103,7 +119,7 @@
     padding: 0px 20px;
     margin: -12px 0;
     border-left: 2px solid  $cocoapods-highlight-color;
-    
+
     p {
       font-size: 16px;
     }
@@ -117,7 +133,7 @@
   .half {
     width: 50%;
     float:left;
-    
+
     h3 {
       margin: 22px 0;
     }
@@ -139,9 +155,9 @@
   }
 
   ul {
-    margin: 12px 0 24px;    
+    margin: 12px 0 24px;
   }
-  
+
   li {
     font-size: 18px;
     line-height: 1.4em;
@@ -156,30 +172,30 @@ table.inherited_options {
   p {
     margin: 8px 8px;
     font-size:14px;
-  } 
+  }
 }
 
 .homepage-index {
   ul {
     padding-left: 0px;
   }
-  
-  li { 
+
+  li {
     padding-left:8px;
-    list-style: none; 
-    
+    list-style: none;
+
     h5 {
       margin-top:16px;
       margin-bottom:0px;
     }
-    
+
     p {
       color:black;
       padding:12px;
       margin-top:0px;
       margin-bottom:10px;
-    }  
-    
+    }
+
   }
 
   h2.guide-index {
