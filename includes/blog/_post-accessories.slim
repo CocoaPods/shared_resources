@@ -9,8 +9,9 @@ section id="post-accessories"
 
         - if authors = self[:site].config['authors']
           - if author = authors[self[:page]['author']]
-            - if gravatar = author['gravatar']
-              img class="gravatar large" src="//gravatar.com/avatar/#{gravatar}" height=50 width=50
-            - if twitter = author['twitter']
-              a href="https://twitter.com/#{twitter}" class="twitter-follow-button" data-show-count="false" data-dnt="true"
-                | Follow #{twitter}
+            .author-info
+              - if gravatar = author['gravatar']
+                img class="gravatar large" src="//gravatar.com/avatar/#{gravatar}"
+              - if twitter = author['twitter']
+                a href="https://twitter.com/#{twitter}" class="twitter-follow-button" data-show-count="false" data-dnt="true"
+                  | Follow #{twitter}
