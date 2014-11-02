@@ -34,16 +34,18 @@ aside {
   background-color:white;
   margin-left:20px;
   margin-right:20px;
-}
-
-pre.highlight {
-  border-left: 2px solid  $cocoapods-highlight-color;
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
-  padding-left: 20px;
-  margin-bottom: 0;
-  border-radius: 0px;
+  
+  /* this was pre.highlight outside of code-break, it may be needed for other sites */
+  pre {
+    border-left: 2px solid  $cocoapods-highlight-color;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    padding-left: 20px;
+    margin-bottom: 0;
+    border-radius: 0px;
+    background-color:white;
+  }
 }
 
 p, ol, ul, label {
