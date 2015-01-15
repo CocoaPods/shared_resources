@@ -392,17 +392,36 @@ footer {
 
 // Modifications for iOS
 
-@media (max-width:768px){
+
+@media (max-width: 767px){
 
   footer.footer-links  .cocoapods-small-logo {
       position:static;
   }
+  
+  .hidden-xs-span {
+    display: none;
+  }
 
+  .visible-xs-span {
+    display: inline;
+  }
 }
 
 @media (max-width: 1000px){
   footer.footer-links .cocoapods-small-logo {
     left: -40px;
+  }
+  .hidden-xs-span {
+    display:inline;
+  }
+
+  .visible-xs-span {
+    display:none;
+  }
+  
+  .hidden-md-span {
+    display:none;
   }
 }
 
@@ -412,6 +431,10 @@ footer {
   }
 
   .visible-lg-span {
+    display:inline;
+  }
+  
+  .hidden-md-span {
     display:inline;
   }
 }
@@ -424,3 +447,5 @@ footer {
     display:none;
   }
 }
+
+
