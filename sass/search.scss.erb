@@ -91,7 +91,7 @@
         height: 32px;
         margin: 0;
         padding: 0;
-        background: url(/stylesheets/images/cancel.svg);
+        background: url(/stylesheets/svg/cancel.svg);
         -webkit-appearance: none;
         cursor: pointer;
       }
@@ -188,7 +188,7 @@
 
     // TODO Florian: Improve the structure.
     //
-    li, ol.more {
+    > li, ol.more {
       font-size: 0.8em;
       background-color: white;
       margin: 0;
@@ -204,9 +204,22 @@
       }
     }
 
-    li.result {
+    > li.result {
       margin-bottom: -1px;
       overflow: hidden;
+
+      .expanded {
+        display:none;
+      }
+      
+      &.is-expanded { 
+        .compressed {
+          display:none;
+        }
+        .expanded {
+          display:block;
+        }
+      }
 
       &.selected {
         background-color: whitesmoke;
@@ -269,7 +282,6 @@
           font-size:14px;
         }
       }
-
 
       .actions {
         text-align:right;
@@ -365,7 +377,7 @@
         margin-left: 0px;
       }
 
-      &.shown li, &.more li, &.onrequest li {
+      &.shown > li, &.more > li, &.onrequest >  li {
         list-style: none;
         padding: 6px 10px;
         border: 1px solid red;
