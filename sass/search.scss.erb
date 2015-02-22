@@ -152,6 +152,7 @@
   }
 
   .results {
+    
     .header {
       font-size: 0.7em;
       opacity: 0.5;
@@ -205,6 +206,8 @@
     }
 
     > li.result {
+      width: 50%;
+      
       margin-bottom: -1px;
       overflow: hidden;
 
@@ -212,7 +215,9 @@
         display:none;
       }
       
-      &.is-expanded { 
+      &.is-expanded {
+        width:100%;
+         
         .compressed {
           display:none;
         }
