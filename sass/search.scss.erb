@@ -192,7 +192,6 @@
     > li, ol.more {
       font-size: 0.8em;
       background-color: white;
-      margin: 0;
 
       border: 1px solid #cccccc;
 
@@ -206,18 +205,22 @@
     }
 
     > li.result {
-      width: 50%;
-      
+      width: calc(50% - 20px);
+      margin: 10px;
+            
       margin-bottom: -1px;
       overflow: hidden;
 
       .expanded {
         display:none;
+        
       }
       
       &.is-expanded {
         width:100%;
-         
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
         .compressed {
           display:none;
         }
@@ -253,9 +256,10 @@
         img.copy {
           vertical-align: top;
           margin-top: 0.1em;
-
+          margin-left: 12px;
           &:hover { opacity: 0.5; }
         }
+
         img.fave {
           vertical-align: top;
           margin-top: 0.1em;
