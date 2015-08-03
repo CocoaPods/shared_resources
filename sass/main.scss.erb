@@ -7,23 +7,49 @@
 
 body {
   font-size: 18px;
-  font-family: $fonts;
+  font-family: $body-fonts;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $fonts;
 }
 
-h1, h2, h3 {
-  font-weight:normal;
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin-top:1em;
+  margin-bottom:0.4em;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 52px;
 }
 
 h2 {
-  margin-top:40px;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+h3 {
+  color: $cocoapods-highlight-color;
+  font-size: 32px;
+  line-height: 41px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
 }
 
 h5 {
-  font-size:1.2em;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 19px;
 }
 
 aside {
