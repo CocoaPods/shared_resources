@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-font-smoothing: subpixel-antialiased;
   margin-top:1em;
   margin-bottom:0.4em;
+  font-weight:normal;
 }
 
 h1 {
@@ -35,6 +36,7 @@ h3 {
   color: $cocoapods-highlight-color;
   font-size: 32px;
   line-height: 41px;
+  font-weight:normal;
 }
 
 h4 {
@@ -60,7 +62,7 @@ aside {
   background-color:white;
   margin-left:20px;
   margin-right:20px;
-  
+
   /* this was pre.highlight outside of code-break, it may be needed for other sites */
   pre {
     border-left: 2px solid  $cocoapods-highlight-color;
@@ -95,7 +97,7 @@ html.flash {
   .has-flash {
     display:block;
   }
-  
+
   .no-flash {
     display:none;
   }
@@ -176,7 +178,7 @@ img.image-zoom {
 }
 
 .navbar-brand.active {
-  background: url(<%= asset_data_uri "CocoaPods-Logo-Active.png" %>) no-repeat left bottom;  
+  background: url(<%= asset_data_uri "CocoaPods-Logo-Active.png" %>) no-repeat left bottom;
   width: 166px;
   height: 48px;
   background-size: 166px 48px;
@@ -192,7 +194,7 @@ img.image-zoom {
     vertical-align:middle;
     margin-top:-20px;
   }
-  
+
   &:hover,
   &:focus {
     background-color: $background-color;
@@ -423,7 +425,7 @@ footer {
   footer.footer-links  .cocoapods-small-logo {
       position:static;
   }
-  
+
   .hidden-xs-span {
     display: none;
   }
@@ -444,7 +446,7 @@ footer {
   .visible-xs-span {
     display:none;
   }
-  
+
   .hidden-md-span {
     display:none;
   }
@@ -458,7 +460,7 @@ footer {
   .visible-lg-span {
     display:inline;
   }
-  
+
   .hidden-md-span {
     display:inline;
   }
@@ -472,5 +474,3 @@ footer {
     display:none;
   }
 }
-
-
