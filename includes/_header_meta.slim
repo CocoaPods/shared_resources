@@ -19,11 +19,15 @@ meta name="viewport" content="width=device-width, initial-scale=1.0"
   meta name="twitter:image:src" content=@pod.or_thumbnail_image
 
 - else
-  meta name="description" content="The Dependency Manager for iOS & Mac projects"
+  - if @page_description 
+    meta name="description" content="The Dependency Manager for iOS & Mac projects"
+  - else
+    meta name="description" content="The Dependency Manager for iOS & Mac projects"
+    
   meta name="author" content="CocoaPods Dev Team"
   meta name="twitter:card" content="summary"
   meta name="twitter:site" content="@CocoaPods"
   meta name="twitter:creator" content="@CocoaPods"
-  meta name="twitter:title" content="CocoaPods"
+  meta name="twitter:title" content="CocoaPods.org"
   meta name="twitter:description" content="The Dependency Manager for iOS & Mac projects."
   meta name="twitter:url" content="https://www.cocoapods.org/"
