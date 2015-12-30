@@ -1,6 +1,7 @@
 ruby:
   is_homepage = !(defined? guides) && (defined? request) && request.path == "index.html"
   is_about = (defined? request) && request.path =~ /\Aabout/
+  is_app = (defined? request) && request.path =~ /\app/
 
   is_guides = defined? guides
   is_blog = defined? Jekyll
@@ -21,6 +22,9 @@ nav.navbar.navbar-static-top role="navigation"
 
     div.collapse.navbar-collapse.navbar-header-collapse
       ul.nav.navbar-nav.navbar-right
+
+        li *is_active(is_app)
+          a href="https://cocoapods.org/app" == "App"
 
         li *is_active(is_about)
           a href="https://cocoapods.org/about" == "About"
