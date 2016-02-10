@@ -1,5 +1,7 @@
 ## CocoaPods Media Pack
 
+*Note* We use a capital *P* in CocoaPods, it's an uphill battle, but worth it :D
+
 So you want to use the CocoaPods logo? Ace.
 
 1st off we have the vectors in [Sketch format](https://github.com/CocoaPods/shared_resources/tree/master/design/sketch).
