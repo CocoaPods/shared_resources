@@ -6,6 +6,9 @@ ruby:
   is_guides = defined? guides
   is_blog = defined? Jekyll
 
+  fin = Date.new(2016,3,21)
+  days_left = fin.mjd - DateTime.now.mjd
+  
   def is_active(page)
     page ? { :class => "active" } : {}
   end
@@ -34,3 +37,7 @@ nav.navbar.navbar-static-top role="navigation"
 
         li *is_active(is_blog)
           a href="https://blog.cocoapods.org" == "Blog"
+        
+        - if days_left > 0
+          li 
+            a href="https://cocoapods.org/socks" == "Socks (#{days_left} days)"
