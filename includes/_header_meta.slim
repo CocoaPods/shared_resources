@@ -18,6 +18,13 @@ meta name="viewport" content="width=device-width, initial-scale=1.0"
   meta name="twitter:url" content=@pod.or_cocoapods_url
   meta name="twitter:image:src" content=@pod.or_thumbnail_image
 
+  meta name="og:site_name" content="CocoaPods"
+  meta name="og:title" content=@pod.name
+  meta name="og:url" content=@pod.or_cocoapods_url
+  meta name="og:type" content="website"
+  meta name="og:description" content=@pod.or_summary_plaintext
+  meta name="og:image" content=@pod.or_thumbnail_image
+
 - else
   - if @page_description 
     meta name="description" content="The Dependency Manager for iOS & Mac projects"
