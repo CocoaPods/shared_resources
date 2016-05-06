@@ -18,12 +18,12 @@ meta name="viewport" content="width=device-width, initial-scale=1.0"
   meta name="twitter:url" content=@pod.or_cocoapods_url
   meta name="twitter:image:src" content=@pod.or_thumbnail_image
 
-  meta name="og:site_name" property="CocoaPods"
-  meta name="og:title" property=@pod.name
-  meta name="og:url" property=@pod.or_cocoapods_url
-  meta name="og:type" property="website"
-  meta name="og:description" property=@pod.or_summary_plaintext
-  meta name="og:image" property=@pod.or_thumbnail_image
+  meta property="og:site_name" content="CocoaPods"
+  meta property="og:title" content=@pod.name
+  meta property="og:url" content=@pod.or_cocoapods_url
+  meta property="og:type" content="website"
+  meta property="og:description" content=@pod.or_summary_plaintext
+  meta property="og:image" content=@pod.or_thumbnail_image
 
 - else
   - if @page_description 
