@@ -1,7 +1,7 @@
 //= require fonts.css
 
 @import "shared/sass/vars";
-@import "syntax";
+@import "shared/sass/syntax";
 
 ///  Baseline colours & fonts
 
@@ -172,14 +172,14 @@ img.image-zoom {
 }
 
 .navbar-brand {
-  background: url(<%= asset_data_uri "CocoaPods-Logo.png" %>) no-repeat left center;
+  background: url(<%= asset_path :png, "CocoaPods-Logo.png" %>) no-repeat left center;
   width: 166px;
   height: 48px;
   background-size: 166px 48px;
 }
 
 .navbar-brand.active {
-  background: url(<%= asset_data_uri "CocoaPods-Logo-Active.png" %>) no-repeat left bottom;
+  background: url(<%= asset_path :png, "CocoaPods-Logo-Active.png" %>) no-repeat left bottom;
   width: 166px;
   height: 48px;
   background-size: 166px 48px;
@@ -308,7 +308,7 @@ $divider-color: #bbb;
 }
 
 a#pull-request {
-  background: url(<%= asset_data_uri "pull-request-image.png" %>) no-repeat left center;
+  background: url(<%= asset_path :png, "pull-request-image.png" %>) no-repeat left center;
   height: 50px;
   width: 50px;
   background-size: 50px 50px;
@@ -411,7 +411,7 @@ footer {
       left: -70px;
       margin-bottom: 12px;
 
-      background: url(<%= asset_data_uri "CocoaPods-Logo-Mini.png" %>) no-repeat left center;
+      background: url(<%= asset_path :png, "CocoaPods-Logo-Mini.png" %>) no-repeat left center;
       height: 36px;
       width: 36px;
       background-size: 36px 36px;

@@ -138,14 +138,14 @@ footer.page-footer {
   &.next {
     top: 0px;
     right: -30px;
-    background: url(<%= asset_data_uri "blog_chevron_next.png" %>) no-repeat 8px 40px;
+    background: url(<%= asset_path :png, "blog_chevron_next.png" %>) no-repeat 8px 40px;
     background-size: 9px 18px;
   }
 
   &.back {
     top: 0px;
     left: -30px;
-    background: url(<%= asset_data_uri "blog_chevron_previous.png" %>) no-repeat 17px 40px;
+    background: url(<%= asset_path :png, "blog_chevron_previous.png" %>) no-repeat 17px 40px;
     background-size: 9px 18px;
   }
 
@@ -169,7 +169,7 @@ footer.page-footer {
 }
 
 a#archives {
-  background: url(<%= asset_data_uri "archives.png" %>) no-repeat left center;
+  background: url(<%= asset_path :png, "archives.png" %>) no-repeat left center;
   height: 50px;
   width: 50px;
   background-size: 50px 50px;
