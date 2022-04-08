@@ -5,7 +5,7 @@ ruby:
   is_guides = defined? guides
   is_blog = defined? Jekyll
 
-  def is_active(page)
+  def self.is_active(page)
     page ? { :class => "active" } : {}
   end
 
