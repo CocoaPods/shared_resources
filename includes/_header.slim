@@ -8,9 +8,11 @@ ruby:
 
   fin = Date.new(2016,3,21)
   days_left = fin.mjd - DateTime.now.mjd
-  
-  def is_active(page)
-    page ? { :class => "active" } : {}
+
+  instance_exec do
+    def is_active(page, classes = [])
+      page ? [:active, *classes] : classes
+    end
   end
 
 nav.navbar.navbar-static-top role="navigation"
@@ -21,7 +23,7 @@ nav.navbar.navbar-static-top role="navigation"
         span.sr-only == "Toggle navigation"
         span.glyphicon.glyphicon-plus
 
-      a.navbar-brand *is_active(is_homepage) href="https://cocoapods.org"
+      a *{class: is_active(is_homepage, 'navbar-brand'), href: "https://cocoapods.org"}
 
     div.collapse.navbar-collapse.navbar-header-collapse
       ul.nav.navbar-nav.navbar-right
@@ -29,13 +31,13 @@ nav.navbar.navbar-static-top role="navigation"
         / li *is_active(is_app)
           / a href="https://cocoapods.org/app" == "App"
 
-        li *is_active(is_about)
+        li *{class: is_active(is_about)}
           a href="https://cocoapods.org/about" == "About"
 
-        li *is_active(is_guides)
+        li *{class: is_active(is_guides)}
           a href="https://guides.cocoapods.org" == "Guides"
 
-        li *is_active(is_blog)
+        li *{class: is_active(is_blog)}
           a href="https://blog.cocoapods.org" == "Blog"
         
         - if days_left > 0
