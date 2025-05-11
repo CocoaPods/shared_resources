@@ -15,6 +15,27 @@ ruby:
     end
   end
 
+  # Get the number of months till dec 2026
+  end_date = DateTime.new(2026, 12, 31)
+  now = DateTime.now
+  months_left = ((end_date - now).to_f / 365 * 12).round
+
+
+css:
+  .deprecation-warning {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .deprecation-warning p {
+    margin: 0;
+    padding: 0;
+  }
+
 nav.navbar.navbar-static-top role="navigation"
   section.container
     div.navbar-header
@@ -43,3 +64,13 @@ nav.navbar.navbar-static-top role="navigation"
         - if days_left > 0
           li 
             a href="https://cocoapods.org/socks" == "Socks (#{days_left} days)"
+
+
+.deprecation-warning
+  .container
+    - if months_left > 1
+      p CocoaPods trunk is moving to be read-only. Read more on the <a href="https://blog.cocoapods.org/CocoaPods-Specs-Repo/">blog</a>, there are #{months_left} months to go.
+    - else 
+      p CocoaPods trunk is now read-only. Read more on the <a href="https://blog.cocoapods.org/CocoaPods-Specs-Repo/">blog</a>.
+    
+     
