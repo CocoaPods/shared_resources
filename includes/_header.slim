@@ -11,7 +11,7 @@ ruby:
     page ? { :class => "active" } : {}
   end
 
-fin = Date.new(2016,3,21)
+  fin = Date.new(2016,3,21)
   days_left = fin.mjd - DateTime.now.mjd
 
   instance_exec do
