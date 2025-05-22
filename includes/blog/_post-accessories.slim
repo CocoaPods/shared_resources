@@ -5,7 +5,7 @@ section id="post-accessories"
 
         a id="pull-request" data-container="body" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="CocoaPods is an open source project. Help us improve these blog posts by sending a pull request. ❤" data-original-title="" title="" href="#{ self[:site].config["github_pr_url"] }#{ self[:page]["path"] }"
 
-        a id="archives" data-container="body" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="Check our out post archives." data-original-title="" title="" href="/archives"
+        a id="archives" data-container="body" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="Check out our post archives." data-original-title="" title="" href="/archives"
 
         - if authors = self[:site].config['authors']
           - if author = authors[self[:page]['author']]
