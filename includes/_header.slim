@@ -6,6 +6,11 @@ ruby:
   is_guides = defined? guides
   is_blog = defined? Jekyll
 
+
+  def self.is_active(page)
+    page ? { :class => "active" } : {}
+  end
+
   fin = Date.new(2016,3,21)
   days_left = fin.mjd - DateTime.now.mjd
 
@@ -14,7 +19,7 @@ ruby:
       page ? [:active, *classes] : classes
     end
   end
-
+    
   # Get the number of months till dec 2026
   end_date = DateTime.new(2026, 12, 31)
   now = DateTime.now
